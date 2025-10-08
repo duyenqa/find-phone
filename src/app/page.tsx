@@ -47,7 +47,8 @@ export default function Home() {
   useEffect(() => {
     async function loadData() {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`, {
+        console.log("BASE_URL:", `${process.env.NEXT_PUBLIC_BASE_URL}/data.json`);
+        const res = await fetch('/data.json', {
           cache: "no-store",
         });
         const json = await res.json();
