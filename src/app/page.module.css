@@ -1,0 +1,54 @@
+.page {
+  font-family: var(--font-geist-sans);
+  width: 100%;
+}
+
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.searchBar{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.recommendUser{
+  width: 100%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+
+.card{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ccdef3;
+  padding: 1rem;
+}
+
+.buttonEmail{
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .wrapper{
+    width: 90%;
+  }
+    .recommendUser{
+        grid-template-columns: auto;
+    }
+  }

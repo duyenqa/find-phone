@@ -1,0 +1,76 @@
+{
+    "data":[
+        {
+            "_id": "9b2fa8ef-6c5a-4e9f-a933-bbb4ca7ccd9d",
+            "phone": "0592076496",
+            "message": "Đầu số 0592 là mã vùng Hạ Môn(Xiamen), Trung Quốc. Ở Việt Nam, các trang báo cáo cuộc gọi và các nhóm cảnh báo trên Facebook có nhiều chiêu trò lừa đảo / gọi quấy rối (ví dụ như yêu cầu nhận hàng / đóng phí",
+            "created_at": 100425
+        },
+        {
+            "_id": "89c9da46-513c-434e-b719-e1ddcd95f3c7",
+            "phone": "02499996270",
+            "message": "Trang Trắng xếp số này vào loại số ảo — tức có thể là VoIP, tổng đài ảo — và khuyến nghị thận trọng. Đặc điểm của số ảo thường dễ bị lợi dụng, bạn vẫn nên giữ sự cảnh giác cao khi nhận cuộc gọi từ số này.",
+            "created_at": 100825
+        },
+        {
+            "_id": "73316b5b-a339-49b1-958e-480a704c6225",
+            "phone": "02499965865",
+            "message": "Nhá máy để gây rối hoặc đơn giản chỉ là một hành vi phiền phức",
+            "created_at": 100825
+        },
+        {
+            "_id": "a2c1d99e-6ddb-4f79-91df-ab07938d61a7",
+            "phone": "02888866468",
+            "message": "Nhá máy",
+            "created_at": 100825
+        },
+        {
+            "_id": "f9f5f423-1e44-4590-8200-4402b61e89bd",
+            "phone": "02888863133",
+            "message": "Nhá máy — tức gọi điện rồi ngắt ngay để khiến người nhận gọi lại, từ đó bị trừ tiền tài khoản",
+            "created_at": 100825
+        },
+        {
+            "_id": "363c8401-b2d2-4461-840b-21da98e03831",
+            "phone": "02488823590",
+            "message": "Trang Trắng liệt số này vào loại Lừa đảo / làm phiền. Mặc dù chưa có bằng chứng pháp lý xác minh, bạn nên cảnh giác khi nhận cuộc gọi từ số này.",
+            "created_at": 100825
+        },
+        {
+            "_id": "0331a8d4-52c3-444c-b8bc-4894ea314d82",
+            "phone": "02455595253",
+            "message": "Trang Trắng liệt số này vào loại lừa đảo / làm phiền. Mặc dù chưa có bằng chứng pháp lý xác minh, bạn nên cảnh giác khi nhận cuộc gọi từ số này.",
+            "created_at": 100825
+        },
+        {
+            "_id": "164c731b-2862-4f64-9525-db611dde1d31",
+            "phone": "02856784128",
+            "message": "Trang Trắng liệt số này vào loại lừa đảo / làm phiền. Khi nghe máy người dùng chỉ nhận được âm nhạc chờ và vẫn bị trừ cước phí",
+            "created_at": 100825
+        },
+        {
+            "_id": "bdc2dfe6-cb24-402f-a00b-4cc882919d65",
+            "phone": "02488832199",
+            "message": "Trang Trắng liệt số này vào loại lừa đảo / làm phiền — thường có hành vi nhá máy nhiều lần khiến người nhận hoang mang và dễ bị dụ gọi lại",
+            "created_at": 100825
+        },
+        {
+            "_id": "43870c22-7838-4c0d-aad3-82fb13ae1a28",
+            "phone": "02488868896",
+            "message": "Trang Trắng liệt số này vào loại làm phiền",
+            "created_at": 100825
+        },
+        {
+            "_id": "97157a98-0dbe-4d41-9cfc-2b68b231b264",
+            "phone": "0816334201",
+            "message": "Trang Trắng liệt số này vào loại nhá máy",
+            "created_at": 100825
+        },
+        {
+            "_id": "d817c276-cc9e-470f-bf0c-5742d3281951",
+            "phone": "02499999285",
+            "message": "Trang Trắng liệt số này vào loại nhá máy / lừa đảo",
+            "created_at": 100825
+        }
+    ]
+}
