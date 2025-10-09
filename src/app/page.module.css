@@ -55,7 +55,8 @@
 }
 
 .activeCard{
-  background-color: #fff;
+  background-color: #d4e2f7;
+  color: #ff5500;
 }
 
 .buttonEmail {
