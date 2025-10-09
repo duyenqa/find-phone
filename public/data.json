@@ -71,6 +71,48 @@
             "phone": "02499999285",
             "message": "Trang Trắng liệt số này vào loại nhá máy / lừa đảo",
             "created_at": 100825
+        },
+        {
+            "_id": "71c145bb-99b1-4fd5-8d20-1222f9124126",
+            "phone": "02477754271",
+            "message": "Trang Trắng liệt số này thuộc loại số ảo thường dùng để gọi ẩn danh hoặc thực hiện các mục đích hợp pháp như hỗ trợ khách hàng. Nhưng cũng có khả năng bị lợi dụng để che giấu danh tính trong các hành vi không minh bạch.",
+            "created_at": 100925
+        },
+        {
+            "_id": "633b8c56-e6d1-4071-8fe7-b0a19f7930c9",
+            "phone": "0766855509",
+            "message": "Hay gửi các tin nhắn rác, đường dẫn quảng cáo app",
+            "created_at": 100925
+        },
+        {
+            "_id": "6b981279-e198-4b08-b153-e22d029811c0",
+            "phone": "0896347714",
+            "message": "Hay gửi các tin nhắn rác, đường dẫn quảng cáo và tải ứng dụng",
+            "created_at": 100925
+        },
+        {
+            "_id": "f1991fcb-4e8e-4c1e-b208-24a2a4bced8d",
+            "phone": "0777690585",
+            "message": "Hay gửi các tin nhắn rác, đường dẫn quảng cáo và tải ứng dụng",
+            "created_at": 100925
+        },
+        {
+            "_id": "e39a3953-2abd-4a89-9f7b-7cf8b0efd219",
+            "phone": "0774013409",
+            "message": "Hay gửi các tin nhắn rác, đường dẫn quảng cáo và tải ứng dụng",
+            "created_at": 100925
+        },
+        {
+            "_id": "04d9a18c-ff5f-49b7-b5f3-1bdac20d47b2",
+            "phone": "0899074426",
+            "message": "Hay gửi các tin nhắn rác, quảng cáo tải ứng dụng",
+            "created_at": 100925
+        },
+        {
+            "_id": "6d3f4e49-2a6a-4a55-a12c-0ea7428d501a",
+            "phone": "02038881275",
+            "message": "Trang Trắng liệt số này thuộc loại số ảo. Dù chưa có dấu hiệu lừa đảo, người dùng nên thận trọng và áp dụng các biện pháp an toàn cơ bản khi nhận cuộc gọi từ số này.",
+            "created_at": 100925
         }
     ]
 }
