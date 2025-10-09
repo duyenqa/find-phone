@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Input from "@/components/textfield/Input";
-import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, Stack } from "@mui/material";
+import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -43,11 +43,11 @@ export default function Home() {
   const [textSearch, setTextSearch] = useState<string>(" ");
   const [open, setOpen] = useState<boolean>(false);
   const [statusSearch, setStatusSearch] = useState<boolean>(false);
+  const [phone, setPhone] = useState<string | null>(" ");
 
   useEffect(() => {
     async function loadData() {
       try {
-        console.log("BASE_URL:", `${process.env.NEXT_PUBLIC_BASE_URL}/data.json`);
         const res = await fetch('/data.json', {
           cache: "no-store",
         });
@@ -63,6 +63,7 @@ export default function Home() {
   function onSearch(text: string) {
     if (!notification || notification.length === 0 || !text.trim()) {
       setShowMessage("Không tìm thấy dữ liệu!");
+      setPhone(null);
       return;
     }
     setStatusSearch(false);
@@ -70,9 +71,11 @@ export default function Home() {
 
     if (found) {
       setShowMessage(found.message);
+      setPhone(found.phone);
       setStatusSearch(true);
     } else {
       setShowMessage('Không tìm thấy dữ liệu!');
+      setPhone(null);
       setStatusSearch(false);
     }
   }
@@ -96,9 +99,27 @@ export default function Home() {
           </div>
           <main className={styles.main}>
             <div className={styles.recommendUser}>
+              <Box component="section" sx={{ marginBottom:'1rem' }}>
+                {showMessage && (
+                  <div>
+                    <h3>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</h3>
+                    <p className={styles.contentInfo}>{showMessage}</p>
+                  </div>
+                )}
+                {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
+                  <Alert severity="warning">
+                    <AlertTitle>Cảnh báo</AlertTitle>
+                    <ul className={styles.notes}>
+                      <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
+                      <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
+                      <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
+                    </ul>
+                  </Alert>
+                )}
+              </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
                 <h3>Liên hệ nhà mạng</h3>
-                <Stack spacing={2}>
+                <div className={styles.cards}>
                   {cards.map((card) => (
                     <div className={styles.card} key={card._id}>
                       <h4>{card.title}</h4>
@@ -121,23 +142,10 @@ export default function Home() {
                       )}
                     </div>
                   ))}
-                </Stack>
+                </div>
                 <div className={styles.buttonEmail}>
                   <Button variant="outlined" onClick={() => setOpen(true)}>Xem mẫu email</Button>
                 </div>
-              </Box>
-              <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
-                {showMessage && <p>{showMessage}</p>}
-                {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
-                  <Alert severity="warning">
-                    <AlertTitle>Cảnh báo</AlertTitle>
-                    <ul className={styles.notes}>
-                      <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
-                      <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
-                      <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
-                    </ul>
-                  </Alert>
-                )}
               </Box>
             </div>
           </main>
