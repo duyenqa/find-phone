@@ -21,7 +21,7 @@
         {
             "_id": "a2c1d99e-6ddb-4f79-91df-ab07938d61a7",
             "phone": "02888866468",
-            "message": "Nhá máy",
+            "message": "Trang trắng liệt kê số này thuộc loại gọi đến và gây làm phiền, thường mời chào những công việc nhẹ với mức lương cao, một dấu hiệu thường gặp trong các cuộc gọi không mong muốn.",
             "created_at": 100825
         },
         {
@@ -142,6 +142,30 @@
             "_id": "028effb3-8666-47f9-b1c6-c3442bc45b68",
             "phone": "02455580534",
             "message": "Trang Trắng liệt số này thuộc loại là nhá máy lừa đảo, để khiến người nhận gọi lại và vô tình phát sinh những khoản chi phí không đáng có.",
+            "created_at": 100925
+        },
+        {
+            "_id": "232632a7-d0b0-444f-9b00-f68a44984958",
+            "phone": "0816334201",
+            "message": "Trang Trắng liệt số này thuộc loại là nhá máy, người gọi chỉ muốn cho số điện thoại của mình được ghi nhớ đến việc cố tình gây rối cho người khác",
+            "created_at": 100925
+        },
+        {
+            "_id": "0c4a1f32-6171-4864-b944-768afa5c66ef",
+            "phone": "02488868896",
+            "message": "Trang Trắng liệt số này thuộc loại làm phiền, bởi các cuộc gọi liên tục",
+            "created_at": 100925
+        },
+        {
+            "_id": "3e7ff3b7-b1f5-4c02-b0c5-852197596c2c",
+            "phone": "02488801223",
+            "message": "Trang Trắng liệt số này thuộc loại nhá máy lừa gọi lại",
+            "created_at": 100925
+        },
+        {
+            "_id": "68a1c9e8-bf7a-4814-bdff-67848b556d83",
+            "phone": "0899094080",
+            "message": "Trang Trắng liệt số này thuộc loại lừa đảo liên quan đến dịch vụ giao hàng",
             "created_at": 100925
         }
     ]
