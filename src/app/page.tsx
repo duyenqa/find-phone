@@ -44,6 +44,7 @@ export default function Home() {
   const [open, setOpen] = useState<boolean>(false);
   const [statusSearch, setStatusSearch] = useState<boolean>(false);
   const [phone, setPhone] = useState<string | null>(" ");
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
 
   useEffect(() => {
     async function loadData() {
@@ -84,6 +85,11 @@ export default function Home() {
     setTextSearch(text.trim());
   }
 
+  function handleSelectedCard(index:number) {
+    console.log(index);
+    setSelectedCard(index);
+  }
+
   return (
     <>
       <div className={styles.page}>
@@ -109,19 +115,17 @@ export default function Home() {
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
                   <Alert severity="warning">
                     <AlertTitle>Cảnh báo</AlertTitle>
-                    <ul className={styles.notes}>
                       <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
                       <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
                       <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
-                    </ul>
                   </Alert>
                 )}
               </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
                 <h3>Liên hệ nhà mạng</h3>
                 <div className={styles.cards}>
-                  {cards.map((card) => (
-                    <div className={styles.card} key={card._id}>
+                  {cards.map((card, index) => (
+                    <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
                       <h4>{card.title}</h4>
                       {card.syntax && (
                         <p>
