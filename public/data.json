@@ -125,6 +125,24 @@
             "phone": "02489874845",
             "message": "Trang Trắng liệt số này thuộc loại là lừa đảo. Hãy thận trọng và tìm hiểu cách xử lý những cuộc gọi từ số này để bảo vệ bản thân khỏi những mánh khóe lừa đảo.",
             "created_at": 100925
+        },
+        {
+            "_id": "34c8d634-e785-41c0-8bbc-f5a545cd4b82",
+            "phone": "0896462983",
+            "message": "Gửi tin nhắn rác, quảng cáo kiếm tiền",
+            "created_at": 100925
+        },
+        {
+            "_id": "cc3a1817-9f66-4af7-9162-0cb27c224db4",
+            "phone": "02468818515",
+            "message": "Trang Trắng liệt số này thuộc loại là nhá máy lừa đảo, để khiến người nhận gọi lại và vô tình phát sinh những khoản chi phí không đáng có.",
+            "created_at": 100925
+        },
+        {
+            "_id": "028effb3-8666-47f9-b1c6-c3442bc45b68",
+            "phone": "02455580534",
+            "message": "Trang Trắng liệt số này thuộc loại là nhá máy lừa đảo, để khiến người nhận gọi lại và vô tình phát sinh những khoản chi phí không đáng có.",
+            "created_at": 100925
         }
     ]
 }
