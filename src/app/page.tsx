@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <main className={styles.main}>
             <div className={styles.recommendUser}>
-              <Box component="section" sx={{ p: 2, backgroundColor: 'rgba(0, 0, 0, 0.12)' }}>
+              <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
                 <h3>Liên hệ nhà mạng</h3>
                 <Stack spacing={2}>
                   {cards.map((card) => (
