@@ -167,6 +167,18 @@
             "phone": "0899094080",
             "message": "Trang Trắng liệt số này thuộc loại lừa đảo liên quan đến dịch vụ giao hàng",
             "created_at": 100925
+        },
+        {
+            "_id": "7e10209b-4aa3-43f9-9367-08ff04a5fe06",
+            "phone": "02188883331",
+            "message": "Trang Trắng liệt số này thuộc loại số ảo, không rõ danh tính người gọi. Dù chưa có dấu hiệu lừa đảo, người dùng nên cẩn trọng và biết cách xử lý an toàn nếu nhận được cuộc gọi từ số này",
+            "created_at": 100925
+        },
+        {
+            "_id": "10e40d2b-16ba-48c3-9fb2-a77f97706ab0",
+            "phone": "0911267109",
+            "message": "Trang Trắng liệt số này thuộc loại cuộc gọi làm phiền và lừa đảo",
+            "created_at": 100925
         }
     ]
 }
