@@ -113,6 +113,18 @@
             "phone": "02038881275",
             "message": "Trang Trắng liệt số này thuộc loại số ảo. Dù chưa có dấu hiệu lừa đảo, người dùng nên thận trọng và áp dụng các biện pháp an toàn cơ bản khi nhận cuộc gọi từ số này.",
             "created_at": 100925
+        },
+        {
+            "_id": "4e70da73-4fe7-4a84-ba92-bfdc57528a1e",
+            "phone": "02868692520",
+            "message": "Trang Trắng liệt số này thuộc loại số ảo, không đăng ký chính chủ. Nhưng tiềm ẩn nhiều rủi ro khi kẻ xấu lợi dụng để thực hiện các hành vi không minh bạch. Vì vậy, khi nhận cuộc gọi từ số ảo bạn nên cảnh giác, nhất là khi nội dung cuộc gọi có dấu hiệu bất thường.",
+            "created_at": 100925
+        },
+        {
+            "_id": "ee0782d9-2742-4e6b-848e-0ddb57810a41",
+            "phone": "02489874845",
+            "message": "Trang Trắng liệt số này thuộc loại là lừa đảo. Hãy thận trọng và tìm hiểu cách xử lý những cuộc gọi từ số này để bảo vệ bản thân khỏi những mánh khóe lừa đảo.",
+            "created_at": 100925
         }
     ]
 }
