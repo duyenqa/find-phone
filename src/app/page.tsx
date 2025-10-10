@@ -121,7 +121,8 @@ export default function Home() {
             <Button
               variant="contained"
               size="medium"
-              onClick={() => onSearch(textSearch)}>
+              onClick={() => onSearch(textSearch)}
+              >
               <SearchIcon />
             </Button>
           </div>

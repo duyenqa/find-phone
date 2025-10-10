@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 24px;
 }
@@ -20,7 +20,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
 }
 
 .recommendUser {
@@ -38,7 +37,7 @@
 .cards{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
   gap: 20px;
 }
 
@@ -49,6 +48,7 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-self: normal;
   gap: 10px;
   cursor: pointer;
@@ -70,12 +70,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
   margin: 25px 0;
 }
 
 .scrollVertical{
-  width: 100%;
   width: 400px;
   max-height: 250px;
   padding: 0.5rem;
@@ -92,7 +93,11 @@
 
 .introduce{
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+}
+
+.introduce > p{
+  line-height: 2;
 }
 
 .contentThrief{
@@ -106,14 +111,29 @@
   text-align: justify;
 }
 
+.contentThrief > p{
+  line-height: 1.1;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     width: 95%;
+  }
+  .searchBar {
+    flex-direction: column;
   }
   .list{
     flex-direction: column;
   }
   .scrollVertical{
     width: auto;
+  }
+}
+
+/* Tablet và desktop */
+@media (min-width: 768px) {
+  .wrapper {
+    width: 80%;
+    padding: 24px;
   }
 }
