@@ -37,6 +37,29 @@ const cards = [
   }
 ];
 
+const phonesSpam = [
+  {
+    id: "9deb2995-e81b-4f0d-92c5-1aa46234cc9f",
+    title: "Gọi liên tục / nhá máy từ các đầu số lạ trong thời gian ngắn"
+  },
+  {
+    id: "d4381a58-3aab-4edf-bd31-748045196178",
+    title: "Người gọi ép buộc cung cấp thông tin cá nhân"
+  },
+  {
+    id: "bbc4f705-f6b4-4050-895f-ebd3be0a05f7",
+    title: "Số lạ có tiền tố nước ngoài(059,...)"
+  },
+  {
+    id: "90beb4ed-f02e-4d0f-8804-feff2c8bb724",
+    title: "Kêu đăng ký, tặng tiền"
+  },
+  {
+    id: "b3382319-dcae-42bb-9b57-3cd7e87f9c5d",
+    title: "Sử dụng ngôn ngữ đe dọa, khẩn cấp"
+  }
+];
+
 export default function Home() {
   const [notification, setNotification] = useState<IPhones[] | undefined>(undefined);
   const [showMessage, setShowMessage] = useState<string>("");
@@ -86,7 +109,6 @@ export default function Home() {
   }
 
   function handleSelectedCard(index:number) {
-    console.log(index);
     setSelectedCard(index);
   }
 
@@ -121,8 +143,30 @@ export default function Home() {
                   </Alert>
                 )}
               </Box>
+              <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#a4d1d6' }}>
+                <h3>Cách nhận biết số rác / lừa đảo</h3>
+                <div className={styles.list}>
+                  <div className={styles.scrollVertical}>
+                    <div className={styles.information}>
+                      {phonesSpam.map((spam) => (
+                        <div className={styles.contentThrief} key={spam.id}>
+                          <p>{spam.title}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.introduce}>
+                    <p>
+                      Số điện thoại rác, lừa đảo tồn tại vì lợi nhuận cao, chi phí thấp, công nghệ dễ lợi dụng và một phần do người dùng chưa cảnh giác đủ. Ở nhiều nước bao gồm Việt Nam vẫn còn khó kiểm soát hoàn toàn nguồn SIM rác, tổng đài ảo, phần mềm VoIP(Internet gọi điện)
+                    </p>
+                    <p>
+                      Nhiều người vẫn tin vào lời nói qua điện thoại, nhất là khi người gọi nói giọng chính quyền, ngân hàng,...v.v Bọn chúng khai thác tâm lý sợ hãi hoặc ham lợi như trúng 100 triệu, bị khóa tài khoản, có người gửi hàng cho bạn,...v.v
+                    </p>
+                  </div>
+                </div>
+              </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
-                <h3>Liên hệ nhà mạng</h3>
+                <h3 className={styles.title}>Cách báo cáo & hành động</h3>
                 <div className={styles.cards}>
                   {cards.map((card, index) => (
                     <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
