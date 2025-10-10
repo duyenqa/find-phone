@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 24px;
 }
@@ -67,8 +67,8 @@
 }
 
 .list{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 20px;
   margin: 25px 0;
@@ -91,7 +91,8 @@
 }
 
 .introduce{
-
+  width: 100%;
+  max-width: 400px;
 }
 
 .contentThrief{
@@ -102,6 +103,7 @@
   align-items: center;
   gap: 10px;
   padding: 0.5rem;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -109,7 +111,7 @@
     width: 95%;
   }
   .list{
-    grid-template-columns: auto;
+    flex-direction: column;
   }
   .scrollVertical{
     width: auto;
