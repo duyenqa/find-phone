@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Input from "@/components/textfield/Input";
+import Footer from "@/components/footer/Footer";
+import { IPhones } from "@/utils/custom-types";
 import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
-import { IPhones } from "@/utils/custom-types";
-import Footer from "@/components/footer/Footer";
 
 const cards = [
   {
@@ -193,7 +193,11 @@ export default function Home() {
                   ))}
                 </div>
                 <div className={styles.buttonEmail}>
-                  <Button variant="outlined" onClick={() => setOpen(true)}>Xem mẫu email</Button>
+                  <Button 
+                    variant="contained"
+                    size="medium" 
+                    color="success"
+                    onClick={() => setOpen(true)}>Xem mẫu email</Button>
                 </div>
               </Box>
             </div>

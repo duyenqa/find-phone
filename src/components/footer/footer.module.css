@@ -1,0 +1,5 @@
+.shareApps{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}

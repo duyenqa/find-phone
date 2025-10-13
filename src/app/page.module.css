@@ -82,7 +82,7 @@
   padding: 0.5rem;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #f1f1f1;
+  background-color: #d4e2f7;
 }
 
 .information{
@@ -102,7 +102,7 @@
 
 .contentThrief{
   width: 100%;
-  background-color: #fec700;
+  background-color: #d4f7e2;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
