@@ -9,56 +9,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
-
-const cards = [
-  {
-    _id: 1,
-    title: 'Mobifone',
-    email: 'cskh@mobifone.vn',
-    phone: 'Gọi 1800 1090'
-  },
-  {
-    _id: 2,
-    title: 'Viettel',
-    email: 'cskh@viettel.com.vn',
-    phone: 'Gọi 1800 8098'
-  },
-  {
-    _id: 3,
-    title: 'Gửi SMS có số điện thoại',
-    syntax: 'V [số điện thoại] nội dung tin nhắn rác / gọi rác',
-    phone: 'Gửi 156'
-  },
-  {
-    _id: 4,
-    title: 'Gửi SMS bị ẩn số điện thoại',
-    syntax: 'S [Nguồn phát tán] [Nội dung tin nhắn rác]',
-    phone: 'Gửi 156'
-  }
-];
-
-const phonesSpam = [
-  {
-    id: "9deb2995-e81b-4f0d-92c5-1aa46234cc9f",
-    title: "Gọi liên tục / nhá máy từ các đầu số lạ trong thời gian ngắn"
-  },
-  {
-    id: "d4381a58-3aab-4edf-bd31-748045196178",
-    title: "Người gọi ép buộc cung cấp thông tin cá nhân"
-  },
-  {
-    id: "bbc4f705-f6b4-4050-895f-ebd3be0a05f7",
-    title: "Số lạ có tiền tố nước ngoài(059,...)"
-  },
-  {
-    id: "90beb4ed-f02e-4d0f-8804-feff2c8bb724",
-    title: "Kêu đăng ký, tặng tiền"
-  },
-  {
-    id: "b3382319-dcae-42bb-9b57-3cd7e87f9c5d",
-    title: "Sử dụng ngôn ngữ đe dọa, khẩn cấp"
-  }
-];
+import ShareApps from "@/components/share/ShareApps";
+import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
 
 export default function Home() {
   const [notification, setNotification] = useState<IPhones[] | undefined>(undefined);
@@ -157,12 +109,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className={styles.introduce}>
-                    <p>
-                      Số điện thoại rác, lừa đảo tồn tại vì lợi nhuận cao, chi phí thấp, công nghệ dễ lợi dụng và một phần do người dùng chưa cảnh giác đủ. Ở nhiều nước bao gồm Việt Nam vẫn còn khó kiểm soát hoàn toàn nguồn SIM rác, tổng đài ảo, phần mềm VoIP(Internet gọi điện)
-                    </p>
-                    <p>
-                      Nhiều người vẫn tin vào lời nói qua điện thoại, nhất là khi người gọi nói giọng chính quyền, ngân hàng,...v.v Bọn chúng khai thác tâm lý sợ hãi hoặc ham lợi như trúng 100 triệu, bị khóa tài khoản, có người gửi hàng cho bạn,...v.v
-                    </p>
+                    <p>{introduceText01}</p>
+                    <p>{introduceText02}</p>
                   </div>
                 </div>
               </Box>
@@ -204,6 +152,7 @@ export default function Home() {
           </main>
           <Footer/>
         </div>
+        <ShareApps />
       </div>
       <Dialog
         open={open}
