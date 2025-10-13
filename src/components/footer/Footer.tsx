@@ -1,11 +1,13 @@
-import { Box } from "@mui/material";
+import styles from "./footer.module.css";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Footer() {
+    const { theme } = useTheme();
     return (
-        <Box component="section" sx={{ p: 2, background: '#000', textAlign: 'center' }}>
-            <p style={{ color: '#fff' }}>
+        <div className={`${styles.footer} ${styles[theme]}`}>
+            <p className={styles.textFooter}>
                 Bản quyền &copy; của Ngô Thị Kim Duyên 2025 - {new Date().getFullYear()}
             </p>
-        </Box>
+        </div>
     );
 }

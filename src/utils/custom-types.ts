@@ -4,3 +4,8 @@ export interface IPhones {
     message: string;
     created_at: number;
 }
+
+export interface ThemeContextType {
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
+}

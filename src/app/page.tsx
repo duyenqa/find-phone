@@ -4,15 +4,17 @@ import styles from "./page.module.css";
 import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
 import { IPhones } from "@/utils/custom-types";
-import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
 import ShareApps from "@/components/share/ShareApps";
 import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Home() {
+  const { theme, toggleTheme } = useTheme();
   const [notification, setNotification] = useState<IPhones[] | undefined>(undefined);
   const [showMessage, setShowMessage] = useState<string>("");
   const [textSearch, setTextSearch] = useState<string>(" ");
@@ -60,27 +62,30 @@ export default function Home() {
     setTextSearch(text.trim());
   }
 
-  function handleSelectedCard(index:number) {
+  function handleSelectedCard(index: number) {
     setSelectedCard(index);
   }
 
   return (
     <>
-      <div className={styles.page}>
+      <div className={`${styles.page} ${styles[theme]}`}>
         <div className={styles.wrapper}>
+          <div className={styles.navbar}>
+            <Chip color="primary" onClick={toggleTheme} label={theme === 'light' ? 'Sáng' : 'Tối'} variant="outlined" />
+          </div>
           <div className={styles.searchBar}>
             <Input handleChangeText={onChangeTextSearch} />
             <Button
               variant="contained"
               size="medium"
               onClick={() => onSearch(textSearch)}
-              >
+            >
               <SearchIcon />
             </Button>
           </div>
           <main className={styles.main}>
             <div className={styles.recommendUser}>
-              <Box component="section" sx={{ marginBottom:'1rem' }}>
+              <Box component="section" sx={{ marginBottom: '1rem' }}>
                 {showMessage && (
                   <div>
                     <h3>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</h3>
@@ -90,9 +95,9 @@ export default function Home() {
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
                   <Alert severity="warning">
                     <AlertTitle>Cảnh báo</AlertTitle>
-                      <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
-                      <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
-                      <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
+                    <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
+                    <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
+                    <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
                   </Alert>
                 )}
               </Box>
@@ -141,16 +146,16 @@ export default function Home() {
                   ))}
                 </div>
                 <div className={styles.buttonEmail}>
-                  <Button 
+                  <Button
                     variant="contained"
-                    size="medium" 
+                    size="medium"
                     color="success"
                     onClick={() => setOpen(true)}>Xem mẫu email</Button>
                 </div>
               </Box>
             </div>
           </main>
-          <Footer/>
+          <Footer />
         </div>
         <ShareApps />
       </div>

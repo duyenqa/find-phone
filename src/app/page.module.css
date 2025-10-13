@@ -1,12 +1,33 @@
+.light {
+  --background: #ffffff;
+  --color: #000000;
+  --line: #a4d1d6;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f2f2f2;
+  --line: #eee;
+}
+
 .page {
   font-family: var(--font-geist-sans);
   width: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .wrapper {
   width: 70%;
   margin: 0 auto;
-  padding: 24px;
+}
+
+.navbar{
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--line);
 }
 
 .searchBar {
@@ -15,6 +36,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .main {
@@ -83,7 +105,7 @@
   overflow-y: auto;
   overflow: scroll;
   overflow-x: hidden;
-  background-color: #d4e2f7;
+  background-color: #eeeeee;
 }
 
 ::-webkit-scrollbar{
@@ -92,7 +114,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #888;
+  background: #2c3e50;
   border-radius: 6px;
   border: 3px solid transparent;
   background-clip: content-box;
@@ -119,7 +141,7 @@
 
 .contentThrief{
   width: 100%;
-  background-color: #d4f7e2;
+  background-color: #f7c6c7;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -151,6 +173,5 @@
 @media (min-width: 768px) {
   .wrapper {
     width: 80%;
-    padding: 24px;
   }
 }

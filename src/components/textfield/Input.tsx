@@ -6,6 +6,8 @@ interface IProps {
 
 const Input:React.FC<IProps> = ({handleChangeText}) => {
    return <TextField
+      color="primary" 
+      focused
       fullWidth 
       label="Nhập số điện thoại cần tìm..."
       id="fullWidth"
