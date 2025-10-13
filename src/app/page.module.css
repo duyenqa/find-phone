@@ -81,8 +81,25 @@
   max-height: 250px;
   padding: 0.5rem;
   overflow-y: auto;
+  overflow: scroll;
   overflow-x: hidden;
   background-color: #d4e2f7;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #f1f1f1;
 }
 
 .information{
