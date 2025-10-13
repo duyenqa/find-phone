@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
 import { IPhones } from "@/utils/custom-types";
-import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText } from "@mui/material";
+import { Alert, AlertTitle, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -97,7 +97,7 @@ export default function Home() {
                 )}
               </Box>
               <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#a4d1d6' }}>
-                <h3>Cách nhận biết số rác / lừa đảo</h3>
+                <Typography variant="h5" gutterBottom>Cách nhận biết số rác / lừa đảo</Typography>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
                     <div className={styles.information}>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
-                <h3 className={styles.title}>Cách báo cáo & hành động</h3>
+                <Typography variant="h5" gutterBottom>Cách báo cáo & hành động</Typography>
                 <div className={styles.cards}>
                   {cards.map((card, index) => (
                     <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
