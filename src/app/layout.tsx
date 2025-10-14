@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     description: "Khám phá tìm thông tin số điện thoại rác cần tìm",
     url: "https://find-phone-sigma.vercel.app/",
     siteName: "Tìm số điện thoại",
+    images: [
+      {
+        url: "https://find-phone-sigma.vercel.app/logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "vi_VN",
     type: "website",
   }
