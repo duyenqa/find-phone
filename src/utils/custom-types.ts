@@ -5,7 +5,8 @@ export interface IPhones {
     created_at: number;
 }
 
+export type Theme = 'light' | 'dark';
 export interface ThemeContextType {
-  theme: 'light' | 'dark';
+  theme: Theme;
   toggleTheme: () => void;
 }
