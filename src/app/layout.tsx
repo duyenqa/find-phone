@@ -28,6 +28,7 @@ export const metadata: Metadata = {
         url: "https://find-phone-sigma.vercel.app/logo.png",
         width: 1200,
         height: 630,
+        alt: "logo find phone spam"
       },
     ],
     locale: "vi_VN",
