@@ -83,7 +83,7 @@ export default function Home() {
             />
           </div>
           <div className={styles.searchBar}>
-            <Input handleChangeText={onChangeTextSearch} />
+            <Input handleChangeText={onChangeTextSearch} filterData={onSearch} />
             <Button
               variant="contained"
               size="medium"

@@ -2,9 +2,10 @@ import { TextField } from "@mui/material";
 
 interface IProps {
    handleChangeText: (text: string) => void;
+   filterData: (text: string) => void;
 }
 
-const Input:React.FC<IProps> = ({handleChangeText}) => {
+const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
    return <TextField
       color="primary" 
       focused
@@ -15,6 +16,13 @@ const Input:React.FC<IProps> = ({handleChangeText}) => {
       onChange={(e) => handleChangeText(e.target.value)}
       required
       autoComplete="off"
+      onKeyDown={(event) => {
+         if (event.key === 'Enter') {
+            event.preventDefault();
+            const target = event.target as HTMLInputElement;
+            filterData(target.value);
+         }
+      }}
    />;
 };
 
