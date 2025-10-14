@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
+import ShareApps from "@/components/share/ShareApps";
 import { IPhones } from "@/utils/custom-types";
 import { Alert, AlertTitle, Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
-import ShareApps from "@/components/share/ShareApps";
+import Brightness2OutlinedIcon from "@mui/icons-material/Brightness2Outlined"; //mat trang
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined"; //mat troi
 import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
 
@@ -68,10 +70,17 @@ export default function Home() {
 
   return (
     <>
-      <div className={`${styles.page} ${styles[theme]}`}>
+      <section className={`${styles.page} ${styles[theme]}`}>
         <div className={styles.wrapper}>
           <div className={styles.navbar}>
-            <Chip color="primary" onClick={toggleTheme} label={theme === 'light' ? 'Sáng' : 'Tối'} variant="outlined" />
+            <Chip 
+              label={theme === 'light' ? 'Sáng' : 'Tối'} 
+              icon={theme === 'light' ? <WbSunnyOutlinedIcon/> : <Brightness2OutlinedIcon/>}
+              color="primary" 
+              onClick={toggleTheme} 
+              variant="outlined" 
+              size="medium"
+            />
           </div>
           <div className={styles.searchBar}>
             <Input handleChangeText={onChangeTextSearch} />
@@ -158,7 +167,7 @@ export default function Home() {
           <Footer />
         </div>
         <ShareApps />
-      </div>
+      </section>
       <Dialog
         open={open}
         onClose={() => setOpen(false)}
