@@ -94,12 +94,12 @@ export default function Home() {
           </div>
           <main className={styles.main}>
             <div className={styles.recommendUser}>
-              <Box component="section" sx={{ marginBottom: '1rem' }}>
+              <Box component="section" sx={{ my: '1rem' }}>
                 {showMessage && (
-                  <div>
+                  <>
                     <h3>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</h3>
                     <p className={styles.contentInfo}>{showMessage}</p>
-                  </div>
+                  </>
                 )}
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
                   <Alert severity="warning">

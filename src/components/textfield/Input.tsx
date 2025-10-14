@@ -1,3 +1,4 @@
+import { useTheme } from "@/context/ThemeContext";
 import { TextField } from "@mui/material";
 
 interface IProps {
@@ -6,6 +7,8 @@ interface IProps {
 }
 
 const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
+   const { theme } = useTheme();
+
    return <TextField
       color="primary" 
       focused
@@ -22,6 +25,11 @@ const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
             const target = event.target as HTMLInputElement;
             filterData(target.value);
          }
+      }}
+      sx={{
+        input: {
+          color: theme == 'dark' ? 'white' : 'black',
+        }
       }}
    />;
 };
