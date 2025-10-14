@@ -97,7 +97,7 @@ export default function Home() {
               <Box component="section" sx={{ my: '1rem' }}>
                 {showMessage && (
                   <>
-                    <h3>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</h3>
+                    <Typography variant="h5" gutterBottom>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
                     <p className={styles.contentInfo}>{showMessage}</p>
                   </>
                 )}
