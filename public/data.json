@@ -251,6 +251,12 @@
             "phone": "02889924741",
             "message": "Số này thuộc loại dạng số ảo, thường được sử dụng thông qua các nền tảng gọi điện trên Internet như VoIP",
             "created_at": 101225
+        },
+        {
+            "_id": "294b3b32-69de-4da0-9a2a-63b128d63d8f",
+            "phone": "0923436629",
+            "message": "Gọi quảng cáo vay tiền",
+            "created_at": 111125
         }
     ]
 }
