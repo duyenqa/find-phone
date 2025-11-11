@@ -1,19 +1,20 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "./page.module.css";
+import { IPhones } from "@/utils/custom-types";
+import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
+import { useTheme } from "@/context/ThemeContext";
 import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
 import ShareApps from "@/components/share/ShareApps";
-import { IPhones } from "@/utils/custom-types";
 import { Alert, AlertTitle, Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
+import DialogTitle from '@mui/material/DialogTitle';
 import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
-import Brightness2OutlinedIcon from "@mui/icons-material/Brightness2Outlined"; //mat trang
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined"; //mat troi
-import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
-import { useTheme } from "@/context/ThemeContext";
+import Brightness2OutlinedIcon from "@mui/icons-material/Brightness2Outlined";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import styles from "./page.module.css";
 
 export default function Home() {
   const { theme, toggleTheme } = useTheme();
@@ -98,7 +99,7 @@ export default function Home() {
                 {showMessage && (
                   <>
                     <Typography variant="h5" gutterBottom>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
-                    <p className={styles.contentInfo}>{showMessage}</p>
+                    <Typography variant="subtitle1" gutterBottom>{showMessage}</Typography>
                   </>
                 )}
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
@@ -174,16 +175,18 @@ export default function Home() {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent>
+        <DialogTitle>Hướng dẫn mẫu Email</DialogTitle>
+        <DialogContent dividers>
           <DialogContentText id="alert-dialog-description">
-            <p>
-              <strong>Tiêu đề email:</strong> Phản ánh số điện thoại nghi lừa đảo [số điện thoại]
-            </p>
-            <div>
-              <p>Kính gửi [Tên nhà mạng],</p>
+            <Typography gutterBottom>
+              Tiêu đề email:Phản ánh số điện thoại nghi lừa đảo [số điện thoại]
+            </Typography>
+            
+            <Typography gutterBottom>
+              Kính gửi [Tên nhà mạng],
               Tôi tên là [Họ tên], số thuê bao [số của bạn]. Tôi muốn yêu cầu hỗ trợ tra cứu nguồn gốc / chặn số điện thoại [số điện thoại] do [lý do: quấy rối / nghi lừa đảo / quảng cáo không mong muốn]. Xin hướng dẫn thủ tục và thời gian xử lý.
               <p>Cảm ơn</p>
-            </div>
+            </Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
