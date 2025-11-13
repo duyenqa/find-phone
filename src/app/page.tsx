@@ -130,7 +130,10 @@ export default function Home() {
                 </div>
               </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
-                <Typography variant="h5" gutterBottom>Cách báo cáo & hành động</Typography>
+                <div className={styles.introduceNumber}>
+                  <Typography variant="h5" gutterBottom>Giới thiệu</Typography>
+                  <p>Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.</p>
+                </div>
                 <div className={styles.cards}>
                   {cards.map((card, index) => (
                     <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>

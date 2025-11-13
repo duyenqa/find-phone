@@ -53,6 +53,18 @@
   padding-bottom: 1rem;
 }
 
+.introduceNumber{
+  display:grid;
+  place-items: center;
+  margin: 1rem 0;
+}
+
+.introduceNumber > p {
+  width: 65%;
+  text-align: center;
+  line-height: 2;
+}
+
 .cards{
   width: 100%;
   display: grid;
@@ -163,6 +175,11 @@
   }
   .scrollVertical{
     width: auto;
+  }
+
+  .introduceNumber > p {
+    width: 100%;
+    line-height: 1.5;
   }
 }
 

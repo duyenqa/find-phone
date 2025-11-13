@@ -54,5 +54,9 @@ export const phonesSpam = [
   {
     id: "b3382319-dcae-42bb-9b57-3cd7e87f9c5d",
     title: "Sử dụng ngôn ngữ đe dọa, khẩn cấp"
+  },
+  {
+    id: "6df80278-a2c7-432d-b731-88b01789d566",
+    title: "Tin nhắn thường kèm theo mã số, đường link hoặc yêu cầu xác nhận"
   }
 ];
