@@ -263,6 +263,12 @@
             "phone": "0964515365",
             "message": "Gọi nhá máy",
             "created_at": 111125
+        },
+        {
+            "_id": "0bd77736-e59e-4522-9bab-3b34f62dfdc5",
+            "phone": "0909486426",
+            "message": "Tin nhắn lừa đảo mời tham gia với ngân hàng MB",
+            "created_at": 131125
         }
     ]
 }
