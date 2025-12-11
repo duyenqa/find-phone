@@ -9,7 +9,6 @@ import ShareApps from "@/components/share/ShareApps";
 import { Alert, AlertTitle, Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, Typography } from "@mui/material";
 import DialogTitle from '@mui/material/DialogTitle';
 import SearchIcon from '@mui/icons-material/Search';
-import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
 import Brightness2OutlinedIcon from "@mui/icons-material/Brightness2Outlined";
