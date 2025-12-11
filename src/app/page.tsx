@@ -98,8 +98,8 @@ export default function Home() {
               <Box component="section" sx={{ my: '1rem' }}>
                 {showMessage && (
                   <>
-                    <Typography variant="h5" gutterBottom>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
-                    <Typography variant="subtitle1" gutterBottom>{showMessage}</Typography>
+                    <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff'}}>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
+                    <Typography variant="subtitle1" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff'}}>{showMessage}</Typography>
                   </>
                 )}
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
