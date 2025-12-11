@@ -103,12 +103,6 @@
             "created_at": 100925
         },
         {
-            "_id": "04d9a18c-ff5f-49b7-b5f3-1bdac20d47b2",
-            "phone": "0899074426",
-            "message": "Hay gửi các tin nhắn rác, quảng cáo tải ứng dụng",
-            "created_at": 100925
-        },
-        {
             "_id": "6d3f4e49-2a6a-4a55-a12c-0ea7428d501a",
             "phone": "02038881275",
             "message": "Số này thuộc loại số ảo. Dù chưa có dấu hiệu lừa đảo, người dùng nên thận trọng và áp dụng các biện pháp an toàn cơ bản khi nhận cuộc gọi từ số này.",
@@ -259,16 +253,88 @@
             "created_at": 111125
         },
         {
-            "_id": "32cc3378-f62d-4557-948d-1cdc6ab5e853",
-            "phone": "0964515365",
-            "message": "Gọi nhá máy",
-            "created_at": 111125
-        },
-        {
             "_id": "0bd77736-e59e-4522-9bab-3b34f62dfdc5",
             "phone": "0909486426",
             "message": "Tin nhắn lừa đảo mời tham gia với ngân hàng MB",
             "created_at": 131125
+        },
+        {
+            "_id": "9bf90f32-2f26-415e-92c0-2b865f959f0b",
+            "phone": "0928041135",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "52348cd1-4105-468c-8be3-ae7e53e85cff",
+            "phone": "0797067043",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "c58d7783-13a5-4e03-84e3-3cfec6ebbf7d",
+            "phone": "0796147299",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "0cb3dcaa-16a1-42dc-ad65-6018f41ab740",
+            "phone": "0795420350",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "44c4abf7-86cb-4c9a-9701-e7c56be187ed",
+            "phone": "0774013409",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "ed6193ec-2e74-4447-b8a5-4790a7ce6908",
+            "phone": "0899074426",
+            "message": "Tin nhắn rác, quảng cáo tải ứng dụng",
+            "created_at": 111225
+        },
+        {
+            "_id": "b534fb2e-79e0-4595-928d-9e6bc54b9e9d",
+            "phone": "0792792033",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "88f050df-e05a-4fdd-b08f-bdf372a51f76",
+            "phone": "0798301264",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "5c8ab84f-22b8-46e7-a962-12b31f5e2742",
+            "phone": "0702982221",
+            "message": "Tin nhắn rác, quảng cáo nạp tiền game, chứa đường dẫn lạ",
+            "created_at": 111225
+        },
+        {
+            "_id": "774bd09e-8885-4acd-8c44-103435dfa46f",
+            "phone": "0923436629",
+            "message": "Gọi quảng cáo vay tiền",
+            "created_at": 111225
+        },
+        {
+            "_id": "3dfba62f-2916-431a-a83c-65198bd38cee",
+            "phone": "02444563356",
+            "message": "Gọi rác, nhá máy",
+            "created_at": 111225
+        },
+        {
+            "_id": "07e174cc-c513-420e-ac4b-f9d097e33b21",
+            "phone": "0763932535",
+            "message": "Tin nhắn rác",
+            "created_at": 111225
+        },
+        {
+            "_id": "afed8c02-2d04-4190-b81f-3ad3e6d7da44",
+            "phone": "0909738438",
+            "message": "Gọi nhá máy làm phiền",
+            "created_at": 111225
         }
     ]
 }
