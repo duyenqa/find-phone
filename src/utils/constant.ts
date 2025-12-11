@@ -4,30 +4,18 @@ export const introduceText02='Nhiều người vẫn tin vào lời nói qua đi
 export const cards = [
   {
     _id: 1,
-    title: 'Gửi email tới Mobifone',
-    email: 'cskh@mobifone.vn',
-    phone: 'Gọi 1800 1090'
-  },
-  {
-    _id: 2,
-    title: 'Gửi email tới Viettel',
-    email: 'cskh@viettel.com.vn',
-    phone: 'Gọi 1800 8098'
-  },
-  {
-    _id: 3,
     title: 'Gửi SMS có số điện thoại',
     syntax: 'V [số điện thoại] Nội dung tin nhắn',
     phone: 'Gửi 156'
   },
   {
-    _id: 4,
+    _id: 2,
     title: 'Gửi SMS có số điện thoại',
     syntax: 'LD [số điện thoại] Nội dung tin nhắn',
     phone: 'Gửi 156'
   },
   {
-    _id: 5,
+    _id: 3,
     title: 'Gửi SMS bị ẩn số điện thoại',
     syntax: 'S [Tên nguồn phát tán] Nội dung tin nhắn',
     phone: 'Gửi 156'
