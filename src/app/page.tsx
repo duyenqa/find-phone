@@ -74,12 +74,12 @@ export default function Home() {
       <section className={`${styles.page} ${styles[theme]}`}>
         <div className={styles.wrapper}>
           <div className={styles.navbar}>
-            <Chip 
-              label={theme === 'light' ? 'Sáng' : 'Tối'} 
-              icon={theme === 'light' ? <WbSunnyOutlinedIcon/> : <Brightness2OutlinedIcon/>}
-              color="primary" 
-              onClick={toggleTheme} 
-              variant="outlined" 
+            <Chip
+              label={theme === 'light' ? 'Sáng' : 'Tối'}
+              icon={theme === 'light' ? <WbSunnyOutlinedIcon /> : <Brightness2OutlinedIcon />}
+              color="primary"
+              onClick={toggleTheme}
+              variant="outlined"
               size="medium"
             />
           </div>
@@ -98,8 +98,8 @@ export default function Home() {
               <Box component="section" sx={{ my: '1rem' }}>
                 {showMessage && (
                   <>
-                    <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff'}}>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
-                    <Typography variant="subtitle1" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff'}}>{showMessage}</Typography>
+                    <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
+                    <Typography variant="subtitle1" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>{showMessage}</Typography>
                   </>
                 )}
                 {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
@@ -112,7 +112,7 @@ export default function Home() {
                 )}
               </Box>
               <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#a4d1d6' }}>
-                <Typography variant="h5" gutterBottom>Cách nhận biết số rác / lừa đảo</Typography>
+                <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Cách nhận biết số rác / lừa đảo</Typography>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
                     <div className={styles.information}>
@@ -124,15 +124,43 @@ export default function Home() {
                     </div>
                   </div>
                   <div className={styles.introduce}>
-                    <p>{introduceText01}</p>
-                    <p>{introduceText02}</p>
+                    <Typography
+                      variant="subtitle1"
+                      gutterBottom
+                      sx={{ color: theme === 'light' ? '#000' : '#fff' }}
+                      >
+                      {introduceText01}
+                    </Typography>
+                    <Typography
+                      variant="subtitle1"
+                      gutterBottom
+                      sx={{ color: theme === 'light' ? '#000' : '#fff' }}
+                      >
+                      {introduceText02}
+                    </Typography>
                   </div>
                 </div>
               </Box>
               <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
                 <div className={styles.introduceNumber}>
-                  <Typography variant="h5" gutterBottom>Giới thiệu</Typography>
-                  <p>Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.</p>
+                  <Typography 
+                    variant="h5" 
+                    gutterBottom
+                    sx={{ color: theme === 'light' ? '#000' : '#fff' }}
+                  >
+                    Giới thiệu
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    sx={{ color: theme === 'light' ? '#000' : '#fff',
+                      width: '65%',
+                      textAlign: 'center',
+                      lineHeight: 2
+                     }}
+                  >
+                    Tổng đài 156 là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
+                  </Typography>
                 </div>
                 <div className={styles.cards}>
                   {cards.map((card, index) => (
@@ -141,12 +169,6 @@ export default function Home() {
                       {card.syntax && (
                         <p>
                           <span style={{ display: "inline-flex" }}><MessageIcon /> {card.syntax}</span>
-                        </p>
-                      )}
-
-                      {card.email && (
-                        <p>
-                          <span style={{ display: "inline-flex" }}><EmailIcon /> {card.email}</span>
                         </p>
                       )}
 
@@ -184,7 +206,7 @@ export default function Home() {
             <Typography gutterBottom>
               Tiêu đề email:Phản ánh số điện thoại nghi lừa đảo [số điện thoại]
             </Typography>
-            
+
             <Typography gutterBottom>
               Kính gửi [Tên nhà mạng],
               Tôi tên là [Họ tên], số thuê bao [số của bạn]. Tôi muốn yêu cầu hỗ trợ tra cứu nguồn gốc / chặn số điện thoại [số điện thoại] do [lý do: quấy rối / nghi lừa đảo / quảng cáo không mong muốn]. Xin hướng dẫn thủ tục và thời gian xử lý.
