@@ -89,11 +89,6 @@
   color: #ff5500;
 }
 
-.buttonEmail {
-  margin: 10px 0;
-  text-align: center;
-}
-
 .list{
   display: flex;
   flex-direction: row;
