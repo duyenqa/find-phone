@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import { supabase } from "../supabaseClient";
 import { IPhones } from "@/utils/custom-types";
 import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
@@ -25,20 +26,18 @@ export default function Home() {
   const [phone, setPhone] = useState<string | null>(" ");
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
 
+  const fetchPhoneNumbers = async () => {
+    const { data, error } = await supabase
+        .from('phones')
+        .select('*')
+
+    if (error) console.error('Lỗi:', error);
+    else setNotification(data);
+  }
+
   useEffect(() => {
-    async function loadData() {
-      try {
-        const res = await fetch('/data.json', {
-          cache: "no-store",
-        });
-        const json = await res.json();
-        setNotification(json.data);
-      } catch (error) {
-        console.error("Lỗi khi tải dữ liệu:", error);
-      }
-    }
-    loadData();
-  }, []);
+    fetchPhoneNumbers();
+  },[])
 
   function onSearch(text: string) {
     if (!notification || notification.length === 0 || !text.trim()) {
