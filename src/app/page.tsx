@@ -8,6 +8,7 @@ import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
 import ShareApps from "@/components/share/ShareApps";
 import { Alert, AlertTitle, Box, Button, Chip, Typography } from "@mui/material";
+import Paper from '@mui/material/Paper';
 import SearchIcon from '@mui/icons-material/Search';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
@@ -79,7 +80,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.searchBar}>
-          <Input handleChangeText={onChangeTextSearch} filterData={onSearch} />
+            <Input handleChangeText={onChangeTextSearch} filterData={onSearch} />          
           <Button
             variant="contained"
             size="medium"
@@ -106,7 +107,7 @@ export default function Home() {
                 </Alert>
               )}
             </Box>
-            <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#a4d1d6' }}>
+            <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#D7BDE2' }}>
               <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Cách nhận biết số rác / lừa đảo</Typography>
               <div className={styles.list}>
                 <div className={styles.scrollVertical}>
@@ -136,7 +137,7 @@ export default function Home() {
                 </div>
               </div>
             </Box>
-            <Box component="section" sx={{ p: 2, backgroundColor: '#a4d1d6' }}>
+            <Box component="section" sx={{ p: 2, backgroundColor: '#D7BDE2' }}>
               <div className={styles.introduceNumber}>
                 <Typography
                   variant="h5"

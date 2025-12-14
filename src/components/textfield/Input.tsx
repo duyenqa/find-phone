@@ -28,7 +28,7 @@ const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
       }}
       sx={{
         input: {
-          color: theme == 'dark' ? 'white' : 'black',
+          color: theme == 'dark' ? 'white' : 'black'
         }
       }}
    />;
