@@ -1,4 +1,3 @@
-import { useTheme } from "@/context/ThemeContext";
 import { TextField } from "@mui/material";
 
 interface IProps {
@@ -7,14 +6,13 @@ interface IProps {
 }
 
 const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
-   const { theme } = useTheme();
-
    return <TextField
       color="primary" 
-      focused
-      fullWidth 
-      label="Nhập số điện thoại cần tìm..."
-      id="fullWidth"
+      fullWidth
+      id="filled-search"
+      label="Số điện thoại"
+      type="search"
+      placeholder="Nhập số điện thoại cần tìm..."
       size="small"
       onChange={(e) => handleChangeText(e.target.value)}
       required
@@ -27,8 +25,8 @@ const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
          }
       }}
       sx={{
-        input: {
-          color: theme == 'dark' ? 'white' : 'black'
+         input: {
+          color: '#000'
         }
       }}
    />;

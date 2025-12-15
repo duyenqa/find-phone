@@ -79,16 +79,21 @@ export default function Home() {
             size="medium"
           />
         </div>
-        <div className={styles.searchBar}>
-            <Input handleChangeText={onChangeTextSearch} filterData={onSearch} />          
-          <Button
-            variant="contained"
-            size="medium"
-            onClick={() => onSearch(textSearch)}
-          >
-            <SearchIcon />
-          </Button>
-        </div>
+        <Paper elevation={0}>
+          <div className={styles.searchBar}>
+            <Input
+              handleChangeText={onChangeTextSearch}
+              filterData={onSearch}
+            />
+            <Button
+              variant="contained"
+              size="medium"
+              onClick={() => onSearch(textSearch)}
+            >
+              <SearchIcon />
+            </Button>
+          </div>
+        </Paper>
         <main className={styles.main}>
           <div className={styles.recommendUser}>
             <Box component="section" sx={{ my: '1rem' }}>
