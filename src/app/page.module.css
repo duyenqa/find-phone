@@ -1,20 +1,20 @@
 .light {
   --background: #ffffff;
-  --color: #000000;
+  --foreground: #000000;
   --line: #a4d1d6;
 }
 
 .dark {
   --background: #1a1a1a;
   --foreground: #f2f2f2;
+  --color: blue;
   --line: #eee;
 }
 
 .page {
-  font-family: var(--font-geist-sans);
   width: 100%;
   background-color: var(--background);
-  color: var(--foreground);
+  /* color: var(--foreground); */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -49,14 +49,22 @@
   padding: 5px;
 }
 
-.title{
-  padding-bottom: 1rem;
-}
 
 .introduceNumber{
   display:grid;
   place-items: center;
   margin: 1rem 0;
+}
+
+.title{
+  color: var(--foreground);
+}
+
+.des{
+  color: var(--foreground);
+  width: 65%;
+  text-align: center;
+  line-height: 2;
 }
 
 .cards{
@@ -136,6 +144,12 @@
   max-width: 500px;
 }
 
+.introduce > p{
+  color: var(--foreground);
+  line-height: 2;
+  text-align: justify;
+}
+
 .contentThrief{
   width: 100%;
   background-color: #f5deb3;
@@ -149,6 +163,7 @@
 }
 
 .contentThrief > p{
+  color: var(--color);
   line-height: 1.1;
 }
 

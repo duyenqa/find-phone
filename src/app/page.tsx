@@ -113,56 +113,31 @@ export default function Home() {
               )}
             </Box>
             <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#D7BDE2' }}>
-              <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Cách nhận biết số rác / lừa đảo</Typography>
+              <h2 className={`${styles.title} ${styles[theme]}`}>Cách nhận biết số rác / lừa đảo</h2>
               <div className={styles.list}>
                 <div className={styles.scrollVertical}>
                   <div className={styles.information}>
                     {phonesSpam.map((spam) => (
                       <div className={styles.contentThrief} key={spam.id}>
-                        <p>{spam.title}</p>
+                        <p className={`${styles[theme]}`}>{spam.title}</p>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className={styles.introduce}>
-                  <Typography
-                    variant="subtitle1"
-                    gutterBottom
-                    sx={{ color: theme === 'light' ? '#000' : '#fff' }}
-                  >
-                    {introduceText01}
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    gutterBottom
-                    sx={{ color: theme === 'light' ? '#000' : '#fff' }}
-                  >
-                    {introduceText02}
-                  </Typography>
+                <div className={`${styles.introduce}`}>
+                  <p className={`${styles[theme]}`}>{introduceText01}</p>
+                  <p className={`${styles[theme]}`}>{introduceText02}</p>
                 </div>
               </div>
             </Box>
             <Box component="section" sx={{ p: 2, backgroundColor: '#D7BDE2' }}>
               <div className={styles.introduceNumber}>
-                <Typography
-                  variant="h5"
-                  gutterBottom
-                  sx={{ color: theme === 'light' ? '#000' : '#fff' }}
-                >
+                <h2 className={`${styles.title} ${styles[theme]}`}>
                   Giới thiệu
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  sx={{
-                    color: theme === 'light' ? '#000' : '#fff',
-                    width: '65%',
-                    textAlign: 'center',
-                    lineHeight: 2
-                  }}
-                >
-                  Tổng đài 156 là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
-                </Typography>
+                </h2>
+                <p className={`${styles.des} ${styles[theme]}`}>
+                  Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
+                </p>
               </div>
               <div className={styles.cards}>
                 {cards.map((card, index) => (
