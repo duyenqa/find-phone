@@ -28,7 +28,7 @@ export async function POST(request:any) {
             from: 'Customer <feedback@resend.dev>',
             to: ['ntduyen255@gmail.com'],
             subject: `New feedback from ${name}`,
-            react: EmailTemplate({ firstName: name, description: description }),
+            react: EmailTemplate({ name: name, description: description }),
             text: `Name: ${name}\nMessage: ${description}`,
         });
 

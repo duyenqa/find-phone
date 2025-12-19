@@ -12,6 +12,6 @@ export interface ThemeContextType {
 }
 
 export interface IEmail {
-  firstName: string;
+  name: string;
   description: string;
 }
