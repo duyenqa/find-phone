@@ -5,7 +5,7 @@ import { IPhones } from "@/utils/custom-types";
 import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
 import Navbar from "@/components/navbar/Navbar";
-import Input from "@/components/textfield/Input";
+import SearchbarField from "@/components/inputs/SearchbarField";
 import Footer from "@/components/footer/Footer";
 import ShareApps from "@/components/share/ShareApps";
 import { Alert, AlertTitle, Box, Button, Typography } from "@mui/material";
@@ -71,7 +71,7 @@ export default function Home() {
         <Navbar />
         <Paper elevation={0}>
           <div className={styles.searchBar}>
-            <Input
+            <SearchbarField
               handleChangeText={onChangeTextSearch}
               filterData={onSearch}
             />

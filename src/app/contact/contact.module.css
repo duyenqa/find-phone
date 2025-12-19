@@ -1,0 +1,55 @@
+.light {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f2f2f2;
+  --color: blue;
+}
+
+.pageContact {
+  width: 100%;
+  background-color: var(--background);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.wrapper {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--foreground);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+/* Tablet và desktop */
+@media (min-width: 768px) {
+  .wrapper {
+    width: 80%;
+  }
+}

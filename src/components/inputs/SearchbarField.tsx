@@ -5,9 +5,9 @@ interface IProps {
    filterData: (text: string) => void;
 }
 
-const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
+const SearchbarField: React.FC<IProps> = ({ handleChangeText, filterData }) => {
    return <TextField
-      color="primary" 
+      color="primary"
       fullWidth
       id="filled-search"
       label="Số điện thoại"
@@ -26,10 +26,10 @@ const Input:React.FC<IProps> = ({handleChangeText, filterData}) => {
       }}
       sx={{
          input: {
-          color: '#000'
-        }
+            color: '#000'
+         }
       }}
    />;
 };
 
-export default Input;
+export default SearchbarField;
