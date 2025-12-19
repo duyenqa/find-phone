@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Playfair_Display } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 
 const playfair_display = Playfair_Display({
@@ -47,6 +49,10 @@ export default function RootLayout({
         <ThemeProvider>
          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
         </ThemeProvider>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+        />
       </body>
     </html>
   );

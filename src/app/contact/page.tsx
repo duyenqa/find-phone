@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import TextInput from "@/components/inputs/TextInput";
 import ButtonSubmit from "@/components/button/ButtonSubmit";
+import { toast } from 'react-toastify';
 import styles from "./contact.module.css";
 
 export default function contact() {
@@ -51,10 +52,12 @@ export default function contact() {
       if (!response.ok) {
         setErrorFetchData(data.error || 'Failed to send email.');
       } else {
+        toast.success("Gửi email thành công!");
         setName(" ");
         setDescription(" ");
       }
     } catch (error) {
+      toast.warning("Gửi email thất bại!!!")
       console.error('Error submitting form:', error);
       setErrorFetchData('An unexpected error occurred.');
     }
