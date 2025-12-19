@@ -4,16 +4,15 @@ import { supabase } from "../supabaseClient";
 import { IPhones } from "@/utils/custom-types";
 import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
+import Navbar from "@/components/navbar/Navbar";
 import Input from "@/components/textfield/Input";
 import Footer from "@/components/footer/Footer";
 import ShareApps from "@/components/share/ShareApps";
-import { Alert, AlertTitle, Box, Button, Chip, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, Button, Typography } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import SearchIcon from '@mui/icons-material/Search';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
-import Brightness2OutlinedIcon from "@mui/icons-material/Brightness2Outlined";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -69,16 +68,7 @@ export default function Home() {
   return (
     <section className={`${styles.page} ${styles[theme]}`}>
       <div className={styles.wrapper}>
-        <div className={styles.navbar}>
-          <Chip
-            label={theme === 'light' ? 'Sáng' : 'Tối'}
-            icon={theme === 'light' ? <WbSunnyOutlinedIcon /> : <Brightness2OutlinedIcon />}
-            color="primary"
-            onClick={toggleTheme}
-            variant="outlined"
-            size="medium"
-          />
-        </div>
+        <Navbar />
         <Paper elevation={0}>
           <div className={styles.searchBar}>
             <Input

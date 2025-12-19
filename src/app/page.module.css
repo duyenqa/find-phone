@@ -1,33 +1,23 @@
 .light {
   --background: #ffffff;
   --foreground: #000000;
-  --line: #a4d1d6;
 }
 
 .dark {
   --background: #1a1a1a;
   --foreground: #f2f2f2;
   --color: blue;
-  --line: #eee;
 }
 
 .page {
   width: 100%;
   background-color: var(--background);
-  /* color: var(--foreground); */
   transition: background-color 0.3s, color 0.3s;
 }
 
 .wrapper {
   width: 70%;
   margin: 0 auto;
-}
-
-.navbar{
-  padding: 0.5rem 0;
-  display: flex;
-  justify-content: flex-end;
-  border-bottom: 1px solid var(--line);
 }
 
 .searchBar {
