@@ -50,8 +50,6 @@ export default function contact() {
 
       if (!response.ok) {
         setErrorFetchData(data.error || 'Failed to send email.');
-        console.info(data);
-
       } else {
         setName(" ");
         setDescription(" ");
