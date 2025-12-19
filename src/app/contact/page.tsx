@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import TextInput from "@/components/inputs/TextInput";
 import ButtonSubmit from "@/components/button/ButtonSubmit";
+import Navbar from "@/components/navbar/Navbar";
 import { toast } from 'react-toastify';
 import styles from "./contact.module.css";
 
@@ -70,7 +71,10 @@ export default function contact() {
   return (
     <section className={`${styles.pageContact} ${styles[theme]}`}>
       <div className={styles.wrapper}>
-        <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
+        <Navbar />
+        <div className={styles.headingBox}>
+          <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
+        </div>
           <div className={styles.form}>
             <TextInput
               textLabel="Nhập tên của bạn"

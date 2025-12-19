@@ -1,18 +1,25 @@
 .light {
   --background: #ffffff;
   --foreground: #000000;
+  --bgForm: transparent;
 }
 
 .dark {
   --background: #1a1a1a;
   --foreground: #f2f2f2;
-  --color: blue;
+  --bgForm: #fff;
 }
 
 .pageContact {
   width: 100%;
+  min-height: 100vh;
   background-color: var(--background);
   transition: background-color 0.3s, color 0.3s;
+}
+
+.pageContact > * {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -21,18 +28,30 @@
   margin: 0 auto;
 }
 
+.headingBox{
+  width: 100%;
+  height: 150px;
+  background-color: #e28590;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   color: var(--foreground);
 }
 
 .form {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 50%;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 1rem;
   border-radius: 5px;
+  background-color: var(--bgForm);
+  border: 1px solid #333;
 }
 
 .errorMessage {
@@ -44,6 +63,10 @@
 @media (max-width: 768px) {
   .wrapper {
     width: 95%;
+  }
+
+  .form{
+    max-width: 90%;
   }
 }
 

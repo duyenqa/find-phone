@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Brightness6Icon from '@mui/icons-material/Brightness6';
 import DehazeIcon from '@mui/icons-material/Dehaze';
+import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
 import styles from "./navbar.module.css";
 
@@ -59,6 +60,12 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={() => setAnchorEl(null)}
             >
+                <MenuItem onClick={() => router.push("/")}>
+                    <ListItemIcon>
+                        <HomeIcon fontSize="small" />
+                    </ListItemIcon>
+                    Trang chủ
+                </MenuItem>
                 <MenuItem onClick={() => router.push("/contact")}>
                     <ListItemIcon>
                         <EmailIcon fontSize="small" />
