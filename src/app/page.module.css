@@ -47,6 +47,9 @@
 
 .title{
   color: var(--foreground);
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: uppercase;
 }
 
 .des{
@@ -157,8 +160,13 @@
 }
 
 .picPhone{
-  display:block;
-  margin: 0 auto;
+  /* display:block; */
+  /* margin: 0 auto; */
+}
+
+.space{
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

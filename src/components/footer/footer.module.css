@@ -1,11 +1,11 @@
 .light {
-  --background: #eee;
-  --foreground: #000000;
+  --background: #333;
+  --foreground: #fff;
 }
 
 .dark {
-  --background: #a4d1d6;
-  --foreground: #fff;
+  --background: #000;
+  --foreground: #eee;
 }
 
 .footer {

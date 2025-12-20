@@ -104,7 +104,7 @@ export default function Home() {
                   </Alert>
                 )}
               </Box>
-              <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#D7BDE2' }}>
+              <Box component="section" sx={{ p: 2, marginBottom: '2rem' }}>
                 <h2 className={`${styles.title} ${styles[theme]}`}>Cách nhận biết số rác / lừa đảo</h2>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
@@ -122,7 +122,18 @@ export default function Home() {
                   </div>
                 </div>
               </Box>
-              <Box component="section" sx={{ p: 2, backgroundColor: '#D7BDE2' }}>
+              <div className={styles.space}>
+                <Image
+                      loading="lazy"
+                      src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
+                      alt="symbol end"
+                      width={250}
+                      height={100}
+                      quality={80}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+              </div>
+              <Box component="section" sx={{ p: 2, my: 5 }}>
                 <div className={styles.introduceNumber}>
                   <h2 className={`${styles.title} ${styles[theme]}`}>
                     Giới thiệu
@@ -150,7 +161,18 @@ export default function Home() {
                   ))}
                 </div>
               </Box>
-              <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#D7BDE2' }}>
+              <div className={styles.space}>
+                <Image
+                      loading="lazy"
+                      src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
+                      alt="symbol end"
+                      width={250}
+                      height={100}
+                      quality={80}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+              </div>
+              <Box component="section" sx={{ p: 2, marginTop: '2rem' }}>
                 <div className={styles.list}>
                   <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>

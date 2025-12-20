@@ -25,7 +25,10 @@
   width: 70%;
   margin: 1rem auto;
   height: 150px;
-  background-color: #e28590;
+  background-image: url('../../../public/bg-contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   display: flex;
   justify-content: center;
   align-items: center;
