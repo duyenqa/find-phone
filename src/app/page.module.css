@@ -39,7 +39,6 @@
   padding: 5px;
 }
 
-
 .introduceNumber{
   display:grid;
   place-items: center;
@@ -155,6 +154,11 @@
 .contentThrief > p{
   color: var(--color);
   line-height: 1.1;
+}
+
+.picPhone{
+  display:block;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {

@@ -1,8 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import Image from 'next/image';
 import { IPhones } from "@/utils/custom-types";
-import { cards, introduceText01, introduceText02, phonesSpam } from "@/utils/constant";
+import { cards, introduceText01, introduceText02, introduceText03, introduceText04, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
 import Navbar from "@/components/navbar/Navbar";
 import SearchbarField from "@/components/inputs/SearchbarField";
@@ -16,7 +17,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import styles from "./page.module.css";
 
 export default function Home() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [notification, setNotification] = useState<IPhones[] | undefined>(undefined);
   const [showMessage, setShowMessage] = useState<string>("");
   const [textSearch, setTextSearch] = useState<string>(" ");
@@ -115,7 +116,7 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                  <div className={`${styles.introduce}`}>
+                  <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>{introduceText01}</p>
                     <p className={`${styles[theme]}`}>{introduceText02}</p>
                   </div>
@@ -147,6 +148,29 @@ export default function Home() {
                       )}
                     </div>
                   ))}
+                </div>
+              </Box>
+              <Box component="section" sx={{ p: 2, my: 5, backgroundColor: '#D7BDE2' }}>
+                <div className={styles.list}>
+                  <div className={styles.introduce}>
+                    <p className={`${styles[theme]}`}>
+                      {introduceText03}
+                    </p>
+                    <p className={`${styles[theme]}`}>
+                      {introduceText04}
+                    </p>
+                  </div>
+                  <div className={styles.picPhone}>
+                    <Image
+                      loading="lazy"
+                      src="/phone-spam.png"
+                      alt="phone spame"
+                      width={400}
+                      height={500}
+                      quality={80}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                 </div>
               </Box>
             </div>

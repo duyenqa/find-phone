@@ -4,9 +4,9 @@ import { useTheme } from "@/context/ThemeContext";
 import TextInput from "@/components/inputs/TextInput";
 import ButtonSubmit from "@/components/button/ButtonSubmit";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from '@/components/footer/Footer';
 import { toast } from 'react-toastify';
 import styles from "./contact.module.css";
-import Footer from './../../components/footer/Footer';
 
 export default function contact() {
   const [name, setName] = useState("");

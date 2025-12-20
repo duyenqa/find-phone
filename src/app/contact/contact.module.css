@@ -12,13 +12,8 @@
 
 .pageContact {
   width: 100%;
-  min-height: 93vh;
+  min-height: 90vh;
   background-color: var(--background);
-}
-
-.pageContact > * {
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 .wrapper {
@@ -77,6 +72,6 @@
 /* Tablet và desktop */
 @media (min-width: 768px) {
   .wrapper {
-    width: 100%;
+    width: 80%;
   }
 }
