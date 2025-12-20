@@ -67,9 +67,9 @@ export default function Home() {
 
   return (
     <>
-    <Navbar />
       <section className={`${styles.page} ${styles[theme]}`}>
         <div className={styles.wrapper}>
+          <Navbar />
           <Paper elevation={0}>
             <div className={styles.searchBar}>
               <SearchbarField

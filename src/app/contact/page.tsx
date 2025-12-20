@@ -71,9 +71,9 @@ export default function contact() {
 
   return (
     <>
-    <Navbar />
       <section className={`${styles.pageContact} ${styles[theme]}`}>
         <div className={styles.wrapper}>
+          <Navbar />
           <div className={styles.headingBox}>
             <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
           </div>
