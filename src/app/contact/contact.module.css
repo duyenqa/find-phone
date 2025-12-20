@@ -12,9 +12,8 @@
 
 .pageContact {
   width: 100%;
-  min-height: 100vh;
+  min-height: 93vh;
   background-color: var(--background);
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .pageContact > * {
@@ -24,7 +23,6 @@
 
 .wrapper {
   width: 70%;
-  height: 100%;
   margin: 0 auto;
 }
 
@@ -42,10 +40,10 @@
 }
 
 .form {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  height: 250px;
+  justify-content: space-evenly;
   max-width: 50%;
   margin: 1rem auto;
   padding: 1rem;

@@ -6,6 +6,7 @@ import ButtonSubmit from "@/components/button/ButtonSubmit";
 import Navbar from "@/components/navbar/Navbar";
 import { toast } from 'react-toastify';
 import styles from "./contact.module.css";
+import Footer from './../../components/footer/Footer';
 
 export default function contact() {
   const [name, setName] = useState("");
@@ -69,12 +70,13 @@ export default function contact() {
   }
 
   return (
-    <section className={`${styles.pageContact} ${styles[theme]}`}>
-      <div className={styles.wrapper}>
-        <Navbar />
-        <div className={styles.headingBox}>
-          <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
-        </div>
+    <>
+    <Navbar />
+      <section className={`${styles.pageContact} ${styles[theme]}`}>
+        <div className={styles.wrapper}>
+          <div className={styles.headingBox}>
+            <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
+          </div>
           <div className={styles.form}>
             <TextInput
               textLabel="Nhập tên của bạn"
@@ -94,7 +96,9 @@ export default function contact() {
             {errorDescription && (<p className={styles.errorMessage}>{errorDescription}</p>)}
             <ButtonSubmit handleSubmit={onSubmit} />
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
+      <Footer/>
+    </>
   )
 }
