@@ -1,8 +1,7 @@
 export const shareUrl='https://find-phone-sigma.vercel.app/'
-export const introduceText01='Số điện thoại rác, lừa đảo tồn tại vì lợi nhuận cao, chi phí thấp, công nghệ dễ lợi dụng và một phần do người dùng chưa cảnh giác đủ. Ở nhiều nước bao gồm Việt Nam vẫn còn khó kiểm soát hoàn toàn nguồn SIM rác, tổng đài ảo, phần mềm VoIP(Internet gọi điện)';
-export const introduceText02='Nhiều người vẫn tin vào lời nói qua điện thoại, nhất là khi người gọi nói giọng chính quyền, ngân hàng,...v.v Bọn chúng khai thác tâm lý sợ hãi hoặc ham lợi như trúng 100 triệu, bị khóa tài khoản, có người gửi hàng cho bạn,...v.v';
-export const introduceText03='Gọi/nhắn tin tới đầu số 156 miễn phí cước cuộc gọi, để cung cấp thông tin về số điện thoại vừa thực hiện cuộc gọi có dấu hiệu thực hiện cuộc gọi rác, cuộc gọi lừa đảo.';
-export const introduceText04='Thông báo tới cơ quan quản lý Nhà nước của bộ Công an, Bộ Thông tin và Truyền thông để có biện pháp xử lý theo quy định.';
+export const introduceText01='Số điện thoại rác, lừa đảo tồn tại vì lợi nhuận cao, chi phí thấp, công nghệ dễ lợi dụng và một phần do người dùng chưa cảnh giác đủ. Ở nhiều nước bao gồm Việt Nam vẫn còn khó kiểm soát hoàn toàn nguồn SIM rác, tổng đài ảo, phần mềm VoIP(Internet gọi điện). Nhiều người vẫn tin vào lời nói qua điện thoại, nhất là khi người gọi nói giọng chính quyền, ngân hàng,...v.v Bọn chúng khai thác tâm lý sợ hãi hoặc ham lợi như trúng 100 triệu, bị khóa tài khoản, có người gửi hàng cho bạn,...v.v';
+export const introduceText02='Gọi/nhắn tin tới đầu số 156 miễn phí cước cuộc gọi, để cung cấp thông tin về số điện thoại vừa thực hiện cuộc gọi có dấu hiệu thực hiện cuộc gọi rác, cuộc gọi lừa đảo.';
+export const introduceText03='Thông báo tới cơ quan quản lý Nhà nước của bộ Công an, Bộ Thông tin và Truyền thông để có biện pháp xử lý theo quy định.';
 export const cards = [
   {
     _id: 1,

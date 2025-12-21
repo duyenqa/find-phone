@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
 import Image from 'next/image';
 import { IPhones } from "@/utils/custom-types";
-import { cards, introduceText01, introduceText02, introduceText03, introduceText04, phonesSpam } from "@/utils/constant";
+import { cards, introduceText01, introduceText02, introduceText03, phonesSpam } from "@/utils/constant";
 import { useTheme } from "@/context/ThemeContext";
 import Navbar from "@/components/navbar/Navbar";
 import SearchbarField from "@/components/inputs/SearchbarField";
@@ -118,20 +118,19 @@ export default function Home() {
                   </div>
                   <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>{introduceText01}</p>
-                    <p className={`${styles[theme]}`}>{introduceText02}</p>
                   </div>
                 </div>
               </Box>
               <div className={styles.space}>
                 <Image
-                      loading="lazy"
-                      src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
-                      alt="symbol end"
-                      width={250}
-                      height={100}
-                      quality={80}
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                  loading="lazy"
+                  src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
+                  alt="symbol end"
+                  width={250}
+                  height={100}
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <Box component="section" sx={{ p: 2, my: 5 }}>
                 <div className={styles.introduceNumber}>
@@ -163,23 +162,23 @@ export default function Home() {
               </Box>
               <div className={styles.space}>
                 <Image
-                      loading="lazy"
-                      src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
-                      alt="symbol end"
-                      width={250}
-                      height={100}
-                      quality={80}
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                  loading="lazy"
+                  src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
+                  alt="symbol end"
+                  width={250}
+                  height={100}
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <Box component="section" sx={{ p: 2, marginTop: '2rem' }}>
                 <div className={styles.list}>
                   <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>
-                      {introduceText03}
+                      {introduceText02}
                     </p>
-                    <p className={`${styles[theme]}`}>
-                      {introduceText04}
+                    <p style={{marginTop: '1rem'}} className={`${styles[theme]}`}>
+                      {introduceText03}
                     </p>
                   </div>
                   <div className={styles.picPhone}>
@@ -187,10 +186,9 @@ export default function Home() {
                       loading="lazy"
                       src="/phone-spam.png"
                       alt="phone spame"
-                      width={400}
-                      height={500}
+                      width={300}
+                      height={400}
                       quality={80}
-                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                 </div>

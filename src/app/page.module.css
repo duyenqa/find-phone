@@ -1,12 +1,14 @@
 .light {
   --background: #ffffff;
   --foreground: #000000;
+  --bgText: transparent;
 }
 
 .dark {
   --background: #1a1a1a;
   --foreground: #f2f2f2;
   --color: blue;
+  --bgText: #0a9383;
 }
 
 .page {
@@ -134,12 +136,19 @@
 .introduce{
   width: 100%;
   max-width: 500px;
+  border: 2px solid #f80;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
 }
 
 .introduce > p{
+  background-color: var(--bgText);  
   color: var(--foreground);
-  line-height: 2;
+  line-height: 1.5;
   text-align: justify;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .contentThrief{
@@ -157,11 +166,6 @@
 .contentThrief > p{
   color: var(--color);
   line-height: 1.1;
-}
-
-.picPhone{
-  /* display:block; */
-  /* margin: 0 auto; */
 }
 
 .space{
