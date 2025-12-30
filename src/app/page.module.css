@@ -1,7 +1,7 @@
 .light {
   --background: #ffffff;
   --foreground: #000000;
-  --bgText: transparent;
+  --bgText: #d0e1f4;
 }
 
 .dark {
@@ -136,19 +136,59 @@
 .introduce{
   width: 100%;
   max-width: 500px;
-  border: 2px solid #f80;
-  border-radius: 8px;
+  position: relative;
+}
+
+.introduce::before{
+  content: '';
+  position: absolute;
+  background-color: var(--bgText);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   padding: 1rem;
+  width: 90%;
+  height: 100%;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 8px;
+  transform-origin: bottom;
+  z-index: -1;
+  transition: all 0.4 all cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.introduce::after{
+  content: '';
+  position: absolute;
+  background-color: #bdb4b4;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  height: 100%;
+  padding: 1rem;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 8px;
+  transform-origin: bottom;
+  z-index: -2;
+  transition: all 0.4 all cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .introduce > p{
-  background-color: var(--bgText);  
   color: var(--foreground);
   line-height: 1.5;
   text-align: justify;
-  border-radius: 8px;
   padding: 1rem;
+}
+
+.introduce:hover{
+  transform: translate(0px, -16px);
+}
+
+.introduce:hover > p::before{
+  rotate: -10deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .contentThrief{
@@ -191,11 +231,17 @@
     width: 100%;
     line-height: 1.5;
   }
+  .introduce:hover{
+    transform: translate(0px, 49px);
+  }
 }
 
 /* Tablet và desktop */
 @media (min-width: 768px) {
   .wrapper {
     width: 80%;
+  }
+  .introduce:hover{
+    transform: translate(0px, 16px);
   }
 }
