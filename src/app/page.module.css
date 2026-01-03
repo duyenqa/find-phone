@@ -47,10 +47,13 @@
   margin: 1rem 0;
 }
 
+.introduceNumber > p{
+  padding: 1rem 0;
+}
+
 .title{
   color: var(--foreground);
   text-align: center;
-  padding: 1rem 0;
   text-transform: uppercase;
 }
 

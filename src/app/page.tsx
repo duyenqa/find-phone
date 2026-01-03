@@ -105,10 +105,10 @@ export default function Home() {
                 )}
               </Box>
               <Box component="section" sx={{ p: 2, marginBottom: '2rem' }}>
-                <h2 className={`${styles.title} ${styles[theme]}`}>Cách nhận biết số rác / lừa đảo</h2>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
                     <div className={styles.information}>
+                      <h4 className={`${styles.title} ${styles[theme]}`}>Cách nhận biết số rác / lừa đảo</h4>
                       {phonesSpam.map((spam) => (
                         <div className={styles.contentThrief} key={spam.id}>
                           <p className={`${styles[theme]}`}>{spam.title}</p>
