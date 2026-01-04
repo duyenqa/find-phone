@@ -111,7 +111,6 @@
   overflow-y: auto;
   overflow: scroll;
   overflow-x: hidden;
-  background-color: #eeeeee;
 }
 
 ::-webkit-scrollbar{
@@ -204,6 +203,14 @@
 .space{
   display: flex;
   justify-content: center;
+}
+
+.circle{
+  position: absolute;
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  background-color: yellow;
+  border-radius: 50%;
 }
 
 @media (max-width: 300px) {
