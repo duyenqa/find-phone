@@ -205,14 +205,6 @@
   justify-content: center;
 }
 
-.circle{
-  position: absolute;
-  width: 150px;
-  aspect-ratio: 1 / 1;
-  background-color: yellow;
-  border-radius: 50%;
-}
-
 @media (max-width: 300px) {
   .wrapper {
     width: 95%;
@@ -224,7 +216,7 @@
 
   .list{
     flex-direction: column;
-    gap: 50px;
+    gap: 70px;
   }
 
   .introduce{
@@ -256,7 +248,7 @@
 
   .list{
     flex-direction: column;
-    gap: 50px;
+    gap: 70px;
   }
 
   .introduce{
