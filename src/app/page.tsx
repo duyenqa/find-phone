@@ -177,7 +177,7 @@ export default function Home() {
                     <p className={`${styles[theme]}`}>
                       {introduceText02}
                     </p>
-                    <p style={{marginTop: '1rem'}} className={`${styles[theme]}`}>
+                    <p className={`${styles[theme]}`}>
                       {introduceText03}
                     </p>
                   </div>
