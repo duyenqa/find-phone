@@ -26,7 +26,7 @@ export const cards = [
 export const phonesSpam = [
   {
     id: "9deb2995-e81b-4f0d-92c5-1aa46234cc9f",
-    title: "Gọi liên tục / nhá máy từ các đầu số lạ trong thời gian ngắn"
+    title: "Gọi liên tục / nhá máy từ các đầu số lạ trong thời gian ngắn như các đầu số 024, 028, 0815, 025, 079, 078,077,089,090..v.v"
   },
   {
     id: "d4381a58-3aab-4edf-bd31-748045196178",
