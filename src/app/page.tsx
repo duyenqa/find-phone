@@ -101,7 +101,7 @@ export default function Home() {
                     <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
                     <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
                     <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
-                    <li>Bạn không nên nhấc máy hoặc tương tác</li>
+                    <li>4.Bạn không nên nhấc máy hoặc tương tác</li>
                   </Alert>
                 )}
               </Box>
