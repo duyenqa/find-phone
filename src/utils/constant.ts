@@ -34,7 +34,7 @@ export const phonesSpam = [
   },
   {
     id: "bbc4f705-f6b4-4050-895f-ebd3be0a05f7",
-    title: "Số lạ có tiền tố nước ngoài(059,...)"
+    title: "Số lạ có tiền tố nước ngoài(059,025189...)"
   },
   {
     id: "90beb4ed-f02e-4d0f-8804-feff2c8bb724",
