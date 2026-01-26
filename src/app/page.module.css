@@ -242,6 +242,10 @@
 }
 
 @media (max-width: 300px) {
+  .submenu {
+    top: 28rem;
+  }
+
   .wrapper {
     width: 95%;
   }
@@ -272,8 +276,14 @@
     line-height: 1.5;
   }
 
-  .title{
-    margin-top: 27rem;
+  .verticalMenu{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .verticalMenu > a{
+    padding: 0.25rem;
   }
 }
 
@@ -311,10 +321,6 @@
     width: 100%;
     line-height: 1.5;
   }
-
-  .title{
-    margin-top: 3rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1166px){
@@ -328,10 +334,6 @@
   }
 
   .introduce > p:nth-of-type(2){
-    margin-top: 7rem;
-  }
-
-  .title{
     margin-top: 7rem;
   }
 }
