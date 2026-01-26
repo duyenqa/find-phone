@@ -19,7 +19,7 @@
 
 .submenu {
   position: fixed;
-  top: 26rem;
+  top: 13rem;
   right: 0;
   z-index: 5;
 }
@@ -37,6 +37,10 @@
   padding: 0.75rem;
   text-decoration: none;
   border-bottom: 2px solid #eaeaea;
+}
+
+.verticalMenu > a:last-child{
+  border-bottom: none;
 }
 
 .wrapper {
@@ -266,6 +270,10 @@
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
+  .submenu {
+    top: 26rem;
+  }
+
   .wrapper {
     width: 95%;
   }
@@ -297,9 +305,14 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1166px){
   .wrapper {
     width: 80%;
+  }
+
+  .list{
+    flex-direction: column;
+    gap: 80px;
   }
 
   .introduce > p:nth-of-type(2){
