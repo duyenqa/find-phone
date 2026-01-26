@@ -130,7 +130,7 @@ export default function Home() {
             </Box>
 
             {showContent == "introduce" && (
-              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+              <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
                     <div className={styles.information}>
@@ -150,40 +150,40 @@ export default function Home() {
             )}
 
             {showContent == "usage" && (
-              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+              <Box component="section" sx={{p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.boxUsage}>
-                <div className={styles.introduceUsage}>
-                  <h2 className={`${styles.title} ${styles[theme]}`}>
-                    Giới thiệu
-                  </h2>
-                  <p className={`${styles.des} ${styles[theme]}`}>
-                    Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
-                  </p>
-                </div>
-                <div className={styles.cards}>
-                  {cards.map((card, index) => (
-                    <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
-                      <h4>{card.title}</h4>
-                      {card.syntax && (
-                        <p>
-                          <span style={{ display: "inline-flex" }}><MessageIcon /> {card.syntax}</span>
-                        </p>
-                      )}
+                  <div className={styles.introduceUsage}>
+                    <h2 className={`${styles.title} ${styles[theme]}`}>
+                      Giới thiệu
+                    </h2>
+                    <p className={`${styles.des} ${styles[theme]}`}>
+                      Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
+                    </p>
+                  </div>
+                  <div className={styles.cards}>
+                    {cards.map((card, index) => (
+                      <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
+                        <h4>{card.title}</h4>
+                        {card.syntax && (
+                          <p>
+                            <span style={{ display: "inline-flex" }}><MessageIcon /> {card.syntax}</span>
+                          </p>
+                        )}
 
-                      {card.phone && (
-                        <p>
-                          <span style={{ display: "inline-flex" }}><PhoneIcon /> {card.phone}</span>
-                        </p>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                        {card.phone && (
+                          <p>
+                            <span style={{ display: "inline-flex" }}><PhoneIcon /> {card.phone}</span>
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Box>
             )}
 
             {showContent == "detail" && (
-              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+              <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.list}>
                   <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>
