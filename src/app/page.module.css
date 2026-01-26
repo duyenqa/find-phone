@@ -19,8 +19,9 @@
 
 .submenu {
   position: fixed;
-  top: 15rem;
+  top: 26rem;
   right: 0;
+  z-index: 5;
 }
 
 .verticalMenu {
@@ -29,13 +30,13 @@
   text-align: center;
 }
 
-.verticalMenu>a {
+.verticalMenu > a {
   background-color: rgb(255, 0, 166);
   border: none;
   display: block;
   padding: 0.75rem;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #eaeaea;
 }
 
 .wrapper {
@@ -274,7 +275,7 @@
 
   .list{
     flex-direction: column;
-    gap: 70px;
+    gap: 80px;
   }
 
   .introduce{
