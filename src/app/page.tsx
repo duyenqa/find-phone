@@ -1,19 +1,23 @@
 "use client"
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
-import Image from 'next/image';
+import { useTheme } from "@/context/ThemeContext";
 import { IPhones } from "@/utils/custom-types";
 import { cards, introduceText01, introduceText02, introduceText03, phonesSpam } from "@/utils/constant";
-import { useTheme } from "@/context/ThemeContext";
+import Image from 'next/image';
+import Link from "next/link";
 import Navbar from "@/components/navbar/Navbar";
 import SearchbarField from "@/components/inputs/SearchbarField";
-import Footer from "@/components/footer/Footer";
 import ShareApps from "@/components/share/ShareApps";
 import { Alert, AlertTitle, Box, Button, Typography } from "@mui/material";
 import Paper from '@mui/material/Paper';
+import { Tooltip } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
+import HiveIcon from '@mui/icons-material/Hive';
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -24,6 +28,7 @@ export default function Home() {
   const [statusSearch, setStatusSearch] = useState<boolean>(false);
   const [phone, setPhone] = useState<string | null>(" ");
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const [showContent, setShowContent] = useState<string>("introduce");
 
   const fetchPhoneNumbers = async () => {
     const { data, error } = await supabase
@@ -67,45 +72,65 @@ export default function Home() {
   }
 
   return (
-    <>
-      <section className={`${styles.page} ${styles[theme]}`}>
-        <div className={styles.wrapper}>
-          <Navbar />
-          <Paper elevation={0}>
-            <div className={styles.searchBar}>
-              <SearchbarField
-                handleChangeText={onChangeTextSearch}
-                filterData={onSearch}
-              />
-              <Button
-                variant="contained"
-                size="medium"
-                onClick={() => onSearch(textSearch)}
-              >
-                <SearchIcon />
-              </Button>
-            </div>
-          </Paper>
-          <main className={styles.main}>
-            <div className={styles.recommendUser}>
-              <Box component="section" sx={{ my: '1rem' }}>
-                {showMessage && (
-                  <>
-                    <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
-                    <Typography variant="subtitle1" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>{showMessage}</Typography>
-                  </>
-                )}
-                {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
-                  <Alert severity="warning">
-                    <AlertTitle>Cảnh báo</AlertTitle>
-                    <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
-                    <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
-                    <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
-                    <li>4.Bạn không nên nhấc máy hoặc tương tác</li>
-                  </Alert>
-                )}
-              </Box>
-              <Box component="section" sx={{ p: 2, marginBottom: '2rem' }}>
+    <section className={`${styles.page} ${styles[theme]}`}>
+      <div className={styles.submenu}>
+        <div className={styles.verticalMenu}>
+          <Tooltip title="Giới thiệu" placement="left">
+            <Link href="#introduce" onClick={() => setShowContent("introduce")}>
+              <LibraryBooksIcon />
+            </Link>
+          </Tooltip>
+          <Tooltip title="Cách dùng" placement="left">
+            <Link href="#usage" onClick={() => setShowContent("usage")}>
+              <InfoOutlineIcon />
+            </Link>
+          </Tooltip>
+          <Tooltip title="Chi tiết" placement="left">
+            <Link href="#detail" onClick={() => setShowContent("detail")}>
+              <HiveIcon />
+            </Link>
+          </Tooltip>
+        </div>
+      </div>
+      <div className={styles.wrapper}>
+        <Navbar />
+        <Paper elevation={0}>
+          <div className={styles.searchBar}>
+            <SearchbarField
+              handleChangeText={onChangeTextSearch}
+              filterData={onSearch}
+            />
+            <Button
+              variant="contained"
+              size="medium"
+              onClick={() => onSearch(textSearch)}
+            >
+              <SearchIcon />
+            </Button>
+          </div>
+        </Paper>
+        <main className={styles.main}>
+          <div className={styles.recommendUser}>
+            <Box component="section" sx={{ my: '1rem' }}>
+              {showMessage && (
+                <>
+                  <Typography variant="h5" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>Số điện thoại {textSearch.length < 4 ? textSearch : phone}</Typography>
+                  <Typography variant="subtitle1" gutterBottom sx={{ color: theme === 'light' ? '#000' : '#fff' }}>{showMessage}</Typography>
+                </>
+              )}
+              {statusSearch == true && showMessage != "Không tìm thấy dữ liệu!" && (
+                <Alert severity="warning">
+                  <AlertTitle>Cảnh báo</AlertTitle>
+                  <li>1.Không gọi lại sau khi nhận cuộc gọi nhá máy từ số này.</li>
+                  <li>2.Cần chặn số điện thoại để ngăn chặn cuộc gọi làm phiền trong tương lai.</li>
+                  <li>3.Nếu thấy có dấu hiệu lừa đảo, nên báo cáo cho nhà mạng để có biện pháp can thiệp kịp thời.</li>
+                  <li>4.Bạn không nên nhấc máy hoặc tương tác</li>
+                </Alert>
+              )}
+            </Box>
+
+            {showContent == "introduce" && (
+              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.list}>
                   <div className={styles.scrollVertical}>
                     <div className={styles.information}>
@@ -122,19 +147,12 @@ export default function Home() {
                   </div>
                 </div>
               </Box>
-              <div className={styles.space}>
-                <Image
-                  loading="lazy"
-                  src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
-                  alt="symbol end"
-                  width={250}
-                  height={100}
-                  quality={80}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <Box component="section" sx={{ p: 2, my: 5 }}>
-                <div className={styles.introduceNumber}>
+            )}
+
+            {showContent == "usage" && (
+              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+                <div className={styles.boxUsage}>
+                <div className={styles.introduceUsage}>
                   <h2 className={`${styles.title} ${styles[theme]}`}>
                     Giới thiệu
                   </h2>
@@ -160,19 +178,12 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+                </div>
               </Box>
-              <div className={styles.space}>
-                <Image
-                  loading="lazy"
-                  src={theme == 'light' ? "/end-yellow.png" : "/end-white.png"}
-                  alt="symbol end"
-                  width={250}
-                  height={100}
-                  quality={80}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <Box component="section" sx={{ p: 2, marginTop: '2rem' }}>
+            )}
+
+            {showContent == "detail" && (
+              <Box component="section" sx={{ p: 2, height: '600px', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.list}>
                   <div className={styles.introduce}>
                     <p className={`${styles[theme]}`}>
@@ -194,12 +205,11 @@ export default function Home() {
                   </div>
                 </div>
               </Box>
-            </div>
-          </main>
-        </div>
-        <ShareApps />
-      </section>
-      <Footer />
-    </>
+            )}
+          </div>
+        </main>
+      </div>
+      <ShareApps />
+    </section>
   );
 }

@@ -9,6 +9,7 @@ import Brightness6Icon from '@mui/icons-material/Brightness6';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
+import PersonIcon from '@mui/icons-material/Person'
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
@@ -71,6 +72,12 @@ export default function Navbar() {
                         <EmailIcon fontSize="small" />
                     </ListItemIcon>
                     Liên hệ
+                </MenuItem>
+                <MenuItem onClick={() => router.push("/about")}>
+                    <ListItemIcon>
+                        <PersonIcon fontSize="small" />
+                    </ListItemIcon>
+                    Về tôi
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>

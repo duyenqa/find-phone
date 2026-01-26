@@ -4,7 +4,6 @@ import { useTheme } from "@/context/ThemeContext";
 import TextInput from "@/components/inputs/TextInput";
 import ButtonSubmit from "@/components/button/ButtonSubmit";
 import Navbar from "@/components/navbar/Navbar";
-import Footer from '@/components/footer/Footer';
 import { toast } from 'react-toastify';
 import styles from "./contact.module.css";
 
@@ -70,35 +69,32 @@ export default function contact() {
   }
 
   return (
-    <>
-      <section className={`${styles.pageContact} ${styles[theme]}`}>
-        <div className={styles.wrapper}>
-          <Navbar />
-          <div className={styles.headingBox}>
-            <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
-          </div>
-          <div className={styles.form}>
-            <TextInput
-              textLabel="Nhập tên của bạn"
-              numberRows="1"
-              text={name}
-              handleChangeText={onChangeName}
-              mandatory={true}
-            />
-            {errorName && (<p className={styles.errorMessage}>{errorName}</p>)}
-            <TextInput
-              textLabel="Nhập nội dung của bạn"
-              numberRows="2"
-              text={description}
-              handleChangeText={onChangeDescription}
-              mandatory={true}
-            />
-            {errorDescription && (<p className={styles.errorMessage}>{errorDescription}</p>)}
-            <ButtonSubmit handleSubmit={onSubmit} />
-          </div>
+    <section className={`${styles.pageContact} ${styles[theme]}`}>
+      <div className={styles.wrapper}>
+        <Navbar />
+        <div className={styles.headingBox}>
+          <h1 className={`${styles.title} ${styles[theme]}`}>Trang liên hệ</h1>
         </div>
-      </section>
-      <Footer/>
-    </>
+        <div className={styles.form}>
+          <TextInput
+            textLabel="Nhập tên của bạn"
+            numberRows="1"
+            text={name}
+            handleChangeText={onChangeName}
+            mandatory={true}
+          />
+          {errorName && (<p className={styles.errorMessage}>{errorName}</p>)}
+          <TextInput
+            textLabel="Nhập nội dung của bạn"
+            numberRows="2"
+            text={description}
+            handleChangeText={onChangeDescription}
+            mandatory={true}
+          />
+          {errorDescription && (<p className={styles.errorMessage}>{errorDescription}</p>)}
+          <ButtonSubmit handleSubmit={onSubmit} />
+        </div>
+      </div>
+    </section>
   )
 }
