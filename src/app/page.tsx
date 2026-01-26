@@ -150,7 +150,7 @@ export default function Home() {
             )}
 
             {showContent == "usage" && (
-              <Box component="section" sx={{p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+              <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
                 <div className={styles.boxUsage}>
                   <div className={styles.introduceUsage}>
                     <h2 className={`${styles.title} ${styles[theme]}`}>

@@ -134,6 +134,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  height: 400px;
 }
 
 .scrollVertical{
@@ -257,6 +258,7 @@
   .list{
     flex-direction: column;
     gap: 70px;
+    height: auto;
   }
 
   .introduce{
@@ -303,6 +305,7 @@
   .list{
     flex-direction: column;
     gap: 80px;
+    height: auto;
   }
 
   .introduce{
