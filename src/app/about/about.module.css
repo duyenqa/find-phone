@@ -38,3 +38,25 @@
 .text {
   color: var(--foreground);
 }
+
+@media (max-width: 300px) {
+  .wrapper {
+    width: 95%;
+    height: 100%;
+  }
+
+  .headingBox{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1166px){
+  .wrapper {
+    width: 95%;
+    height: 100%;
+  }
+
+  .headingBox{
+    width: 100%;
+  }
+}
