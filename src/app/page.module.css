@@ -31,7 +31,7 @@
   text-align: center;
 }
 
-.verticalMenu > a {
+.verticalMenu>a {
   background-color: rgb(255, 0, 166);
   border: none;
   display: block;
@@ -40,7 +40,7 @@
   border-bottom: 2px solid #eaeaea;
 }
 
-.verticalMenu > a:last-child{
+.verticalMenu>a:last-child {
   border-bottom: none;
 }
 
@@ -68,7 +68,7 @@
   padding: 5px;
 }
 
-.boxUsage{
+.boxUsage {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,30 +76,30 @@
   width: 100%;
 }
 
-.introduceUsage{
-  display:grid;
+.introduceUsage {
+  display: grid;
   place-items: center;
   margin: 1rem 0;
 }
 
-.introduceUsage > p{
+.introduceUsage>p {
   padding: 1rem 0;
 }
 
-.title{
+.title {
   color: var(--foreground);
   text-align: center;
   text-transform: uppercase;
 }
 
-.des{
+.des {
   color: var(--foreground);
   width: 65%;
   text-align: center;
   line-height: 2;
 }
 
-.cards{
+.cards {
   width: 100%;
   display: grid;
   margin: 0 auto;
@@ -124,12 +124,12 @@
   transition: background-color 0.3s ease-in-out,
 }
 
-.activeCard{
+.activeCard {
   background-color: #d4e2f7;
   color: #ff5500;
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,7 +138,7 @@
   height: 400px;
 }
 
-.scrollVertical{
+.scrollVertical {
   width: 400px;
   max-height: 250px;
   padding: 0.5rem;
@@ -147,36 +147,36 @@
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
   height: 15px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #f80;
   border-radius: 6px;
   border: 3px solid transparent;
   background-clip: content-box;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: #a4d1d6;
 }
 
-.information{
+.information {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.introduce{
+.introduce {
   width: 100%;
   aspect-ratio: 5 / 2;
   max-width: 500px;
   position: relative;
 }
 
-.introduce::before{
+.introduce::before {
   content: '';
   position: absolute;
   background-color: var(--bgText);
@@ -192,7 +192,7 @@
   z-index: 2;
 }
 
-.introduce::after{
+.introduce::after {
   content: '';
   position: absolute;
   background-color: #bdb4b4;
@@ -208,7 +208,7 @@
   z-index: 1;
 }
 
-.introduce > p{
+.introduce>p {
   color: var(--foreground);
   line-height: 1.5;
   text-align: justify;
@@ -217,11 +217,11 @@
   z-index: 3;
 }
 
-.introduce > p:nth-of-type(2){
-    margin-top: 6rem;
-  }
+.introduce>p:nth-of-type(2) {
+  margin-top: 6rem;
+}
 
-.contentThrief{
+.contentThrief {
   width: 100%;
   background-color: #f5deb3;
   color: #333;
@@ -233,14 +233,9 @@
   text-align: justify;
 }
 
-.contentThrief > p{
+.contentThrief>p {
   color: var(--color);
   line-height: 1.1;
-}
-
-.space{
-  display: flex;
-  justify-content: center;
 }
 
 @media (max-width: 300px) {
@@ -257,36 +252,37 @@
     flex-direction: column;
   }
 
-  .list{
+  .list {
     flex-direction: column;
     gap: 70px;
     height: auto;
   }
 
-  .introduce{
+  .introduce {
     height: 540px;
+    margin-top: 2rem;
   }
 
-  .introduce > p:nth-of-type(2){
+  .introduce>p:nth-of-type(2) {
     margin-top: 12rem;
   }
 
-  .scrollVertical{
+  .scrollVertical {
     width: auto;
   }
 
-  .introduceUsage > p {
+  .introduceUsage>p {
     width: 100%;
     line-height: 1.5;
   }
 
-  .verticalMenu{
+  .verticalMenu {
     width: 50px;
     height: 50px;
     text-align: center;
   }
 
-  .verticalMenu > a{
+  .verticalMenu>a {
     padding: 0.25rem;
   }
 }
@@ -305,42 +301,43 @@
     flex-direction: column;
   }
 
-  .list{
+  .list {
     flex-direction: column;
     gap: 80px;
     height: auto;
   }
 
-  .introduce{
+  .introduce {
     height: 430px;
+    margin-top: 2rem;
   }
 
-  .introduce > p:nth-of-type(2){
-    margin-top: 7rem;
+  .introduce>p:nth-of-type(2) {
+    margin-top: 10rem;
   }
 
-  .scrollVertical{
+  .scrollVertical {
     width: auto;
   }
 
-  .introduceUsage > p {
+  .introduceUsage>p {
     width: 100%;
     line-height: 1.5;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1166px){
+@media (min-width: 768px) and (max-width: 1166px) {
   .wrapper {
     width: 80%;
     height: 100%;
   }
 
-  .list{
+  .list {
     flex-direction: column;
     gap: 80px;
   }
 
-  .introduce > p:nth-of-type(2){
+  .introduce>p:nth-of-type(2) {
     margin-top: 7rem;
   }
 }
