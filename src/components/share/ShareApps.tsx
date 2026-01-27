@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { shareUrl } from "@/utils/constant";
+import { Grow, Fab, Tooltip } from "@mui/material";
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -13,18 +15,15 @@ import {
     ViberIcon,
     LineIcon
 } from "react-share";
-import styles from "./shareapps.module.css";
-import { shareUrl } from "@/utils/constant";
-import { Collapse, Fab, Tooltip } from "@mui/material";
 import ShareIcon from '@mui/icons-material/Share';
-
+import styles from "./shareapps.module.css";
 
 const ShareApps = () => {
     const [showApps, setShowApps] = useState(false);
 
     return (
         <div className={styles.shareApps}>
-            <Collapse in={showApps}>
+            <Grow in={showApps}>
                 <div className={styles.apps}>
                     <Tooltip title="Facebook" placement="left">
                         <FacebookShareButton url={shareUrl}>
@@ -57,7 +56,7 @@ const ShareApps = () => {
                         </WhatsappShareButton>
                     </Tooltip>
                 </div>
-            </Collapse>
+            </Grow>
             <Fab aria-label="like" color="warning" onClick={() => setShowApps(!showApps)}>
                 <ShareIcon />
             </Fab>

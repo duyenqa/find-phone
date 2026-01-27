@@ -9,7 +9,7 @@ import Link from "next/link";
 import Navbar from "@/components/navbar/Navbar";
 import SearchbarField from "@/components/inputs/SearchbarField";
 import ShareApps from "@/components/share/ShareApps";
-import { Alert, AlertTitle, Box, Button, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, Button, Typography, Collapse } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { Tooltip } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
@@ -29,6 +29,7 @@ export default function Home() {
   const [phone, setPhone] = useState<string | null>(" ");
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [showContent, setShowContent] = useState<string>("introduce");
+  const [show, setShow] = useState<boolean>(false);
 
   const fetchPhoneNumbers = async () => {
     const { data, error } = await supabase
@@ -71,22 +72,40 @@ export default function Home() {
     setSelectedCard(index);
   }
 
+  useEffect(() => {
+    if (showContent == "usage") setShow(true);
+    else if (showContent == "detail") setShow(true);
+    else setShow(true);
+    return () => {
+      setShow((prev) => prev);
+    }
+  }, [showContent])
+
   return (
     <section className={`${styles.page} ${styles[theme]}`}>
       <div className={styles.submenu}>
         <div className={styles.verticalMenu}>
           <Tooltip title="Giới thiệu" placement="left">
-            <Link href="#introduce" onClick={() => setShowContent("introduce")}>
+            <Link href="#introduce" onClick={() => {
+              setShowContent("introduce");
+              setShow((prev) => !prev);
+            }}>
               <LibraryBooksIcon />
             </Link>
           </Tooltip>
           <Tooltip title="Cách dùng" placement="left">
-            <Link href="#usage" onClick={() => setShowContent("usage")}>
+            <Link href="#usage" onClick={() => {
+              setShowContent("usage");
+              setShow((prev) => !prev);
+            }}>
               <InfoOutlineIcon />
             </Link>
           </Tooltip>
           <Tooltip title="Chi tiết" placement="left">
-            <Link href="#detail" onClick={() => setShowContent("detail")}>
+            <Link href="#detail" onClick={() => {
+              setShowContent("detail");
+              setShow((prev) => !prev);
+            }}>
               <HiveIcon />
             </Link>
           </Tooltip>
@@ -149,63 +168,66 @@ export default function Home() {
               </Box>
             )}
 
-            {showContent == "usage" && (
-              <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
-                <div className={styles.boxUsage}>
-                  <div className={styles.introduceUsage}>
-                    <h2 className={`${styles.title} ${styles[theme]}`}>
-                      Giới thiệu
-                    </h2>
-                    <p className={`${styles.des} ${styles[theme]}`}>
-                      Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
-                    </p>
-                  </div>
-                  <div className={styles.cards}>
-                    {cards.map((card, index) => (
-                      <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
-                        <h4>{card.title}</h4>
-                        {card.syntax && (
-                          <p>
-                            <span style={{ display: "inline-flex" }}><MessageIcon /> {card.syntax}</span>
-                          </p>
-                        )}
+            <Collapse in={show} timeout={2000}>
 
-                        {card.phone && (
-                          <p>
-                            <span style={{ display: "inline-flex" }}><PhoneIcon /> {card.phone}</span>
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Box>
-            )}
+              {showContent == "usage" && (
+                <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+                  <div className={styles.boxUsage}>
+                    <div className={styles.introduceUsage}>
+                      <h2 className={`${styles.title} ${styles[theme]}`}>
+                        Giới thiệu
+                      </h2>
+                      <p className={`${styles.des} ${styles[theme]}`}>
+                        Tổng đài <strong>156</strong> là đầu số miễn phí của Bộ Thông tin và Truyền thông, dùng để tiếp nhận phản ánh về cuộc gọi rác, tin nhắn rác và các cuộc gọi có dấu hiệu lừa đảo. Áp dụng toàn quốc, trên tất cả các nhà mạng di động và cố định.
+                      </p>
+                    </div>
+                    <div className={styles.cards}>
+                      {cards.map((card, index) => (
+                        <div className={`${styles.card} ${selectedCard == index ? styles.activeCard : ''}`} key={card._id} onClick={() => handleSelectedCard(index)}>
+                          <h4>{card.title}</h4>
+                          {card.syntax && (
+                            <p>
+                              <span style={{ display: "inline-flex" }}><MessageIcon /> {card.syntax}</span>
+                            </p>
+                          )}
 
-            {showContent == "detail" && (
-              <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
-                <div className={styles.list}>
-                  <div className={styles.introduce}>
-                    <p className={`${styles[theme]}`}>
-                      {introduceText02}
-                    </p>
-                    <p className={`${styles[theme]}`}>
-                      {introduceText03}
-                    </p>
+                          {card.phone && (
+                            <p>
+                              <span style={{ display: "inline-flex" }}><PhoneIcon /> {card.phone}</span>
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className={styles.picPhone}>
-                    <Image
-                      loading="lazy"
-                      src="/phone-spam.png"
-                      alt="phone spame"
-                      width={300}
-                      height={400}
-                      quality={80}
-                    />
+                </Box>
+              )}
+
+              {showContent == "detail" && (
+                <Box component="section" sx={{ p: 2, minHeight: '60vh', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
+                  <div className={styles.list}>
+                    <div className={styles.introduce}>
+                      <p className={`${styles[theme]}`}>
+                        {introduceText02}
+                      </p>
+                      <p className={`${styles[theme]}`}>
+                        {introduceText03}
+                      </p>
+                    </div>
+                    <div className={styles.picPhone}>
+                      <Image
+                        loading="lazy"
+                        src="/phone-spam.png"
+                        alt="phone spame"
+                        width={300}
+                        height={400}
+                        quality={80}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Box>
-            )}
+                </Box>
+              )}
+            </Collapse>
           </div>
         </main>
       </div>
