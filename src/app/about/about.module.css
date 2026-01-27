@@ -21,7 +21,19 @@
   margin: 0 auto;
 }
 
-.title {
+.headingBox{
+  width: 70%;
+  margin: 1rem auto;
+  height: 150px;
+  background-image: url('../../../public/bg-contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
   color: var(--foreground);
-  text-transform: capitalize;
 }
